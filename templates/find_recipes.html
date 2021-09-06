@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veggie Planet</title>
+</head>
+<body>
+
+    {% for recipe in recipes %}
+        {{ recipe.category_name }}
+        {{ recipe.recipe_title }}
+        {{ recipe.recipe_summary }}
+        {{ recipe.servings }}
+        {{ recipe.ready_in }}
+        {{ recipe.calories }}
+        {% for ingredient in recipe.recipe_ingredients %}
+            {{ ingredient }}
+        {% endfor %}
+        {% for step in recipe.recipe_method %}
+            {{ step }}
+        {% endfor %}
+    {% endfor %}
+    
+</body>
+</html>
