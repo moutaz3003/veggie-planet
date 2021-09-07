@@ -27,6 +27,15 @@ h6 {
     font-family: "Playfair Display", serif;
 }
 
+.flash-messages {
+    text-align: center;
+    background-color: #cda45e;
+    color: black;
+}
+
+.flash-messages p {
+    padding: 20px 0;
+}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -329,7 +338,7 @@ h6 {
 --------------------------------------------------------------*/
 
 .signup .container {
-    padding-top: 120px;
+    padding-top: 70px;
     padding-bottom: 50px;
 }
 
@@ -356,48 +365,48 @@ h6 {
     color: #bab3a6;
 }
 
-.signup .email-form {
+.signup .signup-form {
     width: 100%;
 }
 
-.signup .email-form .form-group {
+.signup .signup-form .form-group {
     padding-bottom: 8px;
 }
 
-.signup .email-form input {
+.signup .signup-form input {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
     background: #0c0b09;
     border-color: #625b4b;
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.signup .email-form input::-webkit-input-placeholder,
-.signup .email-form textarea::-webkit-input-placeholder {
+.signup .signup-form input::-webkit-input-placeholder,
+.signup .signup-form textarea::-webkit-input-placeholder {
     color: #a49b89;
 }
 
-.signup .email-form input::-moz-placeholder,
-.signup .email-form textarea::-moz-placeholder {
+.signup .signup-form input::-moz-placeholder,
+.signup .signup-form textarea::-moz-placeholder {
     color: #a49b89;
 }
 
-.signup .email-form input::placeholder {
+.signup .signup-form input::placeholder {
     color: #a49b89;
 }
 
-.signup .email-form input:focus {
+.signup .signup-form input:focus {
     border-color: #cda45e;
 }
 
-.signup .email-form input {
+.signup .signup-form input {
     height: 44px;
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255,255,255,0.1);
 }
 
-.signup .email-form button[type="submit"] {
+.signup .signup-form button[type="submit"] {
     background: #cda45e;
     border: 0;
     padding: 10px 35px;
@@ -406,6 +415,29 @@ h6 {
     border-radius: 50px;
 }
 
-.signup .email-form button[type="submit"]:hover {
+.signup .signup-form button[type="submit"]:hover {
     background: #d3af71;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+    background: black;
+    padding: 0 0 30px 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+#footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
 }
