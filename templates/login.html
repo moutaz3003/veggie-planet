@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<!-- Sign Up -->
+<!-- Log in -->
 <section id="signup" class="signup">
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-            <h2>Sign Up</h2>
-            <p>Register with us to begin</p>
+            <h2>Log In</h2>
+            <p>Log In To Your Profile Below</p>
         </div>
     </div>
 
@@ -35,20 +35,21 @@
                     </div>
                 </div>
 
-                <div class="text-center"><button type="submit">Sign Up</button></div>
+                <div class="text-center"><button type="submit">Log In</button></div>
             </form>
 
         </div>
         <div class="row mt-5">
             <div class="col-md-12">
                 <p class="text-center">
-                    Already Registered? <a href="{{ url_for('login') }}">Log In Here</a>
+                    Not Registered? <a href="{{ url_for('signup') }}">Sign Up Here</a>
                 </p>
             </div>
         </div>
 
     </div>
+
 </section>
-<!-- End Signup Section -->
+<!-- End Login Section -->
 
 {% endblock %}
