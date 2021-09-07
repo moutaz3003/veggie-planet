@@ -182,7 +182,7 @@ h6 {
 
 .signup-btn:hover {
     background: #cda45e;
-    color: #fff;
+    color: #000;
 }
 
 @media (max-width: 992px) {
@@ -321,4 +321,91 @@ h6 {
 
 .navbar-mobile .getstarted {
     margin: 15px;
+}
+
+
+/*--------------------------------------------------------------
+# Signup
+--------------------------------------------------------------*/
+
+.signup .container {
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+
+#signup > div:nth-child(2) {
+    padding-top: 0;
+}
+
+#signup .section-title {
+    text-align: center;
+}
+
+#signup .section-title h2 {
+    color: #cda45e;
+}
+
+.signup .info {
+    width: 100%;
+}
+
+.signup .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #bab3a6;
+}
+
+.signup .email-form {
+    width: 100%;
+}
+
+.signup .email-form .form-group {
+    padding-bottom: 8px;
+}
+
+.signup .email-form input {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    background: #0c0b09;
+    border-color: #625b4b;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.signup .email-form input::-webkit-input-placeholder,
+.signup .email-form textarea::-webkit-input-placeholder {
+    color: #a49b89;
+}
+
+.signup .email-form input::-moz-placeholder,
+.signup .email-form textarea::-moz-placeholder {
+    color: #a49b89;
+}
+
+.signup .email-form input::placeholder {
+    color: #a49b89;
+}
+
+.signup .email-form input:focus {
+    border-color: #cda45e;
+}
+
+.signup .email-form input {
+    height: 44px;
+    background-color: rgba(255,255,255,0.05);
+}
+
+.signup .email-form button[type="submit"] {
+    background: #cda45e;
+    border: 0;
+    padding: 10px 35px;
+    color: #000;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.signup .email-form button[type="submit"]:hover {
+    background: #d3af71;
 }

@@ -40,11 +40,11 @@
     <header id="header" class="fixed-top d-flex align-items-cente">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-            <h1 class="logo me-auto me-lg-0"><a href="index.html">Vegan Kitchen</a></h1>
+            <h1 class="logo me-auto me-lg-0"><a href="{{ url_for('home') }}">Vegan Kitchen</a></h1>
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="{{ url_for('home') }}">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="#recipes">Recipes</a></li>
                     <li><a class="nav-link scrollto" href="gallery.html">Gallery</a></li>
@@ -54,15 +54,25 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
             <!-- .navbar -->
-            <a href="#" class="signup-btn scrollto d-none d-lg-flex">Sign Up</a>
+            <a href="{{ url_for('signup') }}" class="signup-btn scrollto d-none d-lg-flex">Sign Up</a>
 
         </div>
     </header>
     <!-- End Header -->
 
-    {% block content %}
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                
+                {% block content %}
 
-    {% endblock %}
+                {% endblock %}
+
+            </div>
+        </div>
+    </section>
+
+    
 
 
 
