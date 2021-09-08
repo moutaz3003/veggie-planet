@@ -70,7 +70,9 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
             <!-- .navbar -->
-            <a href="{{ url_for('signup') }}" class="signup-btn scrollto d-none d-lg-flex">Sign Up</a>
+            {% if not session.user %}
+                <a href="{{ url_for('signup') }}" class="signup-btn scrollto d-none d-lg-flex">Sign Up</a>
+            {% endif %}
 
         </div>
     </header>
