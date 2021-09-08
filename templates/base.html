@@ -54,10 +54,18 @@
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="#recipes">Recipes</a></li>
                     <li><a class="nav-link scrollto" href="gallery.html">Gallery</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url_for('logout') }}">Log Out</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            {% if session.user %}
+                                <li><a class="nav-link scrollto" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                                <li><a class="nav-link scrollto" href="{{ url_for('logout') }}">Log Out</a></li>
+                            {% else %}
+                                <li><a class="nav-link scrollto" href="{{ url_for('login') }}">Log In</a></li>
+                                <li><a class="nav-link scrollto" href="{{ url_for('signup') }}">Sign Up</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
