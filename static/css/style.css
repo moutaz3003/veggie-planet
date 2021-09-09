@@ -845,6 +845,10 @@ section {
   padding: 80px 0;
 }
 
+.find_recipe h1, h3 {
+  color: #cda45e;
+}
+
 .find_recipe:before {
   content: "";
   background: rgba(0, 0, 0, 0.85);
@@ -881,7 +885,7 @@ section {
 
 .find_recipe .find_recipe-img::after {
   position: absolute;
-  right: 20px;
+  left: 320px;
   bottom: 20px;
   width: 60px;
   height: 60px;
@@ -904,6 +908,11 @@ section {
 .find_recipe .find_recipe-img:hover::after {
   right: 10px;
   bottom: 10px;
+}
+
+.recipe-img {
+  max-height: 500px;
+  width: 400px;
 }
 
 .find_recipe .content h3 {
