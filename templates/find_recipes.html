@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Veggie Planet | Find Recipes
+Veggie Planet | Find Recipes
 {% endblock %}
 
 
@@ -27,45 +27,47 @@
         <!-- End Search Bar -->
 
         {% for recipe in recipes %}
-        <!-- Display All recipes -->
-        <div class="row mb-5">
-            {% if loop.index % 2 != 0 %}
-            <div class="col-lg-6 order-1 order-lg-2 order-md-1" data-aos="zoom-in" data-aos-delay="100">
-                <div class="find_recipe-img">
-                    <img src="{{ recipe.recipe_image_url }}" alt="">
+            <!-- Display All recipes -->
+            <div class="row mb-5">
+                {% if loop.index % 2 != 0 %}
+                <div class="col-lg-6 order-1 order-lg-2 order-md-1" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="find_recipe-img">
+                        <img src="{{ recipe.recipe_image_url }}" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="my-auto col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 order-md-2 content text-center justify-content-center align-items-center">
-                <h3>{{ recipe.recipe_title }}</h3>
-                <p class="fst-italic">
-                    {{ recipe.recipe_summary }}
-                </p>
-                <p>
-                    {{ recipe.recipe_servings }}
-                </p>
-                <a href="" class="recipe-button">View Full Recipe</a>
-            </div>
+                <div
+                    class="my-auto col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 order-md-2 content text-center justify-content-center align-items-center">
+                    <h3>{{ recipe.recipe_title }}</h3>
+                    <p class="fst-italic">
+                        {{ recipe.recipe_summary }}
+                    </p>
+                    <p>
+                        {{ recipe.recipe_servings }}
+                    </p>
+                    <a href="" class="recipe-button">View Full Recipe</a>
+                </div>
             {% else %}
-            <div class="my-auto col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 order-md-2 content text-center justify-content-center align-items-center">
-                <h3>{{ recipe.recipe_title }}</h3>
-                <p class="fst-italic">
-                    {{ recipe.recipe_summary }}
-                </p>
-                <p>
-                    {{ recipe.recipe_servings }}
-                </p>
-                <a href="" class="recipe-button">View Full Recipe</a>
-            </div>
-            <div class="col-lg-6 order-2 order-lg-1 order-md-1" data-aos="zoom-in" data-aos-delay="100">
-                <div class="find_recipe-img">
-                    <img src="{{ recipe.recipe_image_url }}" alt="">
+                <div
+                    class="my-auto col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 order-md-2 content text-center justify-content-center align-items-center">
+                    <h3>{{ recipe.recipe_title }}</h3>
+                    <p class="fst-italic">
+                        {{ recipe.recipe_summary }}
+                    </p>
+                    <p>
+                        {{ recipe.recipe_servings }}
+                    </p>
+                    <a href="" class="recipe-button">View Full Recipe</a>
                 </div>
-            </div>
+                <div class="col-lg-6 order-2 order-lg-1 order-md-1" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="find_recipe-img">
+                        <img src="{{ recipe.recipe_image_url }}" alt="">
+                    </div>
+                </div>
             {% endif %}
         </div>
 
         {% if loop.index != loop.length  %}
-        <hr>
+            <hr>
         {% endif %}
 
         {% endfor %}
