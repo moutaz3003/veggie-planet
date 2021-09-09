@@ -31,7 +31,7 @@ Veggie Planet | Find Recipes
         {% for recipe in recipes %}
             <!-- Display All recipes -->
             <div class="row mb-5">
-                {% if loop.index % 2 != 0 %}
+            {% if loop.index % 2 != 0 %}
                 <div class="col-lg-6 order-1 order-lg-2 order-md-1" data-aos="zoom-in" data-aos-delay="100">
                     <div class="find_recipe-img">
                         <img src="{{ recipe.recipe_image_url }}" alt="" class="mh-75 recipe-img">

@@ -37,7 +37,6 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
@@ -46,6 +45,7 @@
     <header id="header" class="d-flex align-items-center">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
+            <!-- navbar -->
             <h1 class="logo me-auto me-lg-0"><a href="{{ url_for('home') }}">Veggie Planet</a></h1>
 
             <nav id="navbar" class="navbar order-last order-lg-0">
@@ -69,7 +69,8 @@
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
-            <!-- .navbar -->
+            
+            <!-- Do not display the sign up button if the user is logged in -->
             {% if not session.user %}
                 <a href="{{ url_for('signup') }}" class="signup-btn scrollto d-none d-lg-flex">Sign Up</a>
             {% endif %}
@@ -82,6 +83,7 @@
 
     {% endblock %}
 
+    <!--========= Footer =============-->
     <footer id="footer">
         <div class="container">
             <div class="copyright">
@@ -89,6 +91,10 @@
             </div>
         </div>
     </footer>
+    <!--========= End Footer ========-->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
