@@ -1155,6 +1155,13 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+ section #contact {
+  padding-top: 20px;
+ }
+
+ #contact .section-title {
+   padding-top: 0;
+ }
 
  .contact-email-form {
   width: 100%;
