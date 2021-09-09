@@ -6,6 +6,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background: #0c0b09;
   color: #fff;
+  overflow-x: hidden;
 }
 
 a {
@@ -1143,7 +1144,7 @@ section {
 
 
 /*--------------------------------------------------------------
-# Book A Table
+# Contact
 --------------------------------------------------------------*/
 
  .contact-email-form {
@@ -1241,7 +1242,8 @@ section {
   padding: 10px 12px;
 }
 
- .contact-email-form button[type="submit"] {
+ .contact-email-form button[type="submit"],
+ .recipe-button {
   background: #cda45e;
   border: 0;
   padding: 10px 35px;
@@ -1250,8 +1252,28 @@ section {
   border-radius: 50px;
 }
 
- .contact-email-form button[type="submit"]:hover {
+ .contact-email-form button[type="submit"]:hover,
+ .recipe-button:hover {
   background: #d3af71;
+  color: black;
+}
+
+/*--------------------------------------------------------------
+# User Profile Page
+--------------------------------------------------------------*/
+
+#profile {
+  padding-top: 0;
+}
+
+#profile .section-title {
+  padding-top: 15px;
+}
+
+.welcome-message {
+  margin-top: 20px;
+  margin-top: 0;
+  color: #cda45e;
 }
 
 /*--------------------------------------------------------------
