@@ -76,24 +76,11 @@
 
         </div>
     </header>
+    <!--=========== End Header ========-->
 
-    <!-- ======= Flash Messaages ======= -->
-    <section class="flash-messages">
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <p>{{ message }}</p>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </section>
-    <!-- ====== End Flash Messages ========-->
+    {% block content %}
 
-    <main class="container">
-        {% block content %}
-
-        {% endblock %}
-    </main>
+    {% endblock %}
 
     <footer id="footer">
         <div class="container">

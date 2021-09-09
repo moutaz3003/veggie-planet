@@ -2,13 +2,25 @@
 
 {% block content %}
 
+<!-- ======= Flash Messaages ======= -->
+<section class="flash-messages my-auto">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>
+<!-- ====== End Flash Messages ========-->
+
 <!-- Sign Up -->
 <section id="signup" class="signup">
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">
             <h2>Sign Up</h2>
-            <p>Register with us to begin</p>
+            <p>Register With Us</p>
         </div>
     </div>
 
