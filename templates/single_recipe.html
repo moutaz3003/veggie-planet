@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section>
+    <div class="container">
+        <div class="col-lg-6 order-1 order-lg-2 order-md-1" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="find_recipe-img">
+                        <img src="{{ recipe.recipe_image_url }}" alt="" class="mh-75 recipe-img">
+                    </div>
+                </div>
+                <div class="my-auto col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 order-md-2 content text-center justify-content-center align-items-center">
+                    <h3>{{ recipe.recipe_title }}</h3>
+                    <p class="fst-italic mt-5">
+                        {{ recipe.recipe_summary }}
+                    </p>
+                    <p>
+                        <strong>Serves:</strong> {{ recipe.recipe_servings }}
+                    </p>
+                    <p class="ready-in">
+                        <strong>Ready In:</strong> {{ recipe.recipe_ready_in }}
+                    </p>
+                    <a href="" class="recipe-button mt-5">View Full Recipe</a>
+                </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -59,6 +59,7 @@
                         <ul>
                             {% if session.user %}
                                 <li><a class="nav-link scrollto" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                                <li><a class="nav-link scrollto" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                                 <li><a class="nav-link scrollto" href="{{ url_for('logout') }}">Log Out</a></li>
                             {% else %}
                                 <li><a class="nav-link scrollto" href="{{ url_for('login') }}">Log In</a></li>
