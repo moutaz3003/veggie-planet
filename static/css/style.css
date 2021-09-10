@@ -1130,6 +1130,130 @@ section {
   font-size: 22px;
 }
 
+.add-recipe-form {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+ .add-recipe-form .form-group {
+  padding-bottom: 8px;
+}
+
+ .add-recipe-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+ .add-recipe-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+ .add-recipe-form .error-message br+br {
+  margin-top: 25px;
+}
+
+ .add-recipe-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+ .add-recipe-form .loading {
+  display: none;
+  text-align: center;
+  padding: 15px;
+}
+
+ .add-recipe-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #cda45e;
+  border-top-color: #1a1814;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+ .add-recipe-form input,
+ .add-recipe-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #625b4b;
+  color: white;
+}
+
+ .add-recipe-form input::-webkit-input-placeholder,
+ .add-recipe-form textarea::-webkit-input-placeholder {
+  color: #a49b89;
+}
+
+ .add-recipe-form input::-moz-placeholder,
+ .add-recipe-form textarea::-moz-placeholder {
+  color: #a49b89;
+}
+
+ .add-recipe-form input::placeholder,
+ .add-recipe-form textarea::placeholder {
+  color: #a49b89;
+}
+
+ .add-recipe-form input:focus,
+ .add-recipe-form textarea:focus {
+  border-color: #cda45e;
+}
+
+ .add-recipe-form input {
+  height: 44px;
+}
+
+ .add-recipe-form textarea {
+  padding: 10px 12px;
+}
+
+ .add-recipe-btn {
+  background: #cda45e;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+ .add-recipe-btn:hover,
+ .recipe-button:hover {
+  background: #d3af71;
+  color: black;
+}
+
+.add-method-btn,
+.add-ingredient-btn {
+  background: green;
+  padding: 10px 25px;
+  font-size: 0.8rem;
+}
+
+.add-method-btn:hover,
+.add-ingredient-btn:hover {
+  background: rgb(2, 95, 2);
+  color: white;
+}
+
 
 /*--------------------------------------------------------------
 # Why Us

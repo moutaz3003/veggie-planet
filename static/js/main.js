@@ -270,3 +270,22 @@
     });
 
 })()
+
+let ingredient = 1;
+let maxIngredients = 20;
+let ingredientsField = document.querySelector(".add-recipe-ingredients-field");
+let addIngredient = document.querySelector(".add-ingredient-btn");
+let inputField = document.createElement("input");
+inputField.type = "text";
+inputField.name = "recipe_ingredients";
+inputField.className = "form-control mt-3 mb-3";
+inputField.id = "recipe_ingredients";
+inputField.placeholder = "Add ingredient, one at a time";
+
+addIngredient.addEventListener("click", function(e){
+    e.preventDefault();
+    if(ingredient < maxIngredients){
+        ingredient++;
+        ingredientsField.appendChild(inputField);
+    }    
+});

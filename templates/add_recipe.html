@@ -13,7 +13,7 @@
 
             <div class="col-lg-12 mt-5 mt-lg-0">
 
-                <form action="forms/contact.php" method="post" role="form" class="contact-email-form mt-5">
+                <form action="" method="POST" role="form" class="add-recipe-form mt-5">
                     <div class="row">
                         <div class="col-md-12 form-group mb-3">
                             <input type="text" name="recipe_title" class="form-control" id="recipe_title" placeholder="Recipe Title"
@@ -22,26 +22,32 @@
                         <div class="col-md-12 form-group mb-3">
                             <input type="text" name="recipe_summary" class="form-control" id="recipe_summary" placeholder="Recipe Summary">
                         </div>
-                        <div class="col-md-6 form-group mt-3 mb-3 mt-md-0">
+                        <div class="col-md-6 form-group mb-3 mt-md-0">
                             <input type="number" class="form-control" name="recipe_servings" id="recipe_servings" placeholder="Serves how many people"
                                 required>
                         </div>
-                        <div class="col-md-6 form-group mt-3 mb-3 mt-md-0">
+                        <div class="col-md-6 form-group mb-3 mt-md-0">
                             <input type="number" class="form-control" name="recipe_ready_in" id="recipe_ready_in" placeholder="Preparation time in minutes"
                                 required>
                         </div>
-                        <div class="col-md-12 form-group mb-3">
-                            <input type="text" name="recipe_ingredients" class="form-control" id="recipe_ingredients" placeholder="Add Ingredient">
+                        <div class="col-md-9 form-group mb-3 add-recipe-ingredients-field">
+                            <input type="text" name="recipe_ingredients" class="form-control" id="recipe_ingredients" placeholder="Add ingredient, one at a time">
                         </div>
-                        <div class="col-md-12 form-group mb-3">
-                            <input type="text" name="recipe_method" class="form-control" id="recipe_method" placeholder="Add cooking method">
+                        <div class="text-center col-md-3">
+                            <button class="add-recipe-btn add-ingredient-btn mb-3" type="submit"><i class="fas fa-plus"></i> Add Ingredient</button>
+                        </div>
+                        <div class="col-md-9 form-group mb-3">
+                            <input type="text" name="recipe_method" class="form-control" id="recipe_method" placeholder="Add cooking method, one step at a time">
+                        </div>
+                        <div class="text-center col-md-3 mb-3">
+                            <button class="add-recipe-btn add-method-btn" type="submit"><i class="fas fa-plus"></i> Add Cooking Step</button>
                         </div>
                         <div class="col-md-12 form-group mb-3">
                             <input type="url" name="recipe_image_url" class="form-control" id="recipe_image_url" placeholder="Place image URL here">
                         </div>
                     </div>
                     </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
+                    <div class="text-center"><button class="add-recipe-btn" type="submit">Add Recipe</button></div>
                 </form>
 
             </div>
