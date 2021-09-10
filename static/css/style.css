@@ -1078,6 +1078,58 @@ section {
   }
 }
 
+/*--------------------------------------------------------------
+# Why Us
+--------------------------------------------------------------*/
+
+#add_recipe {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: url("../img/baked-eggplant-with-tomatoes-garlic-paprika.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+}
+
+#add_recipe:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#add_recipe .container {
+  padding-top: 0;
+}
+
+@media (max-width: 992px) {
+  #add_recipe .container {
+      padding-top: 0;
+  }
+}
+
+#add_recipe h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#add_recipe h1 span {
+  color: #cda45e;
+}
+
+#add_recipe h2 {
+  color: #eee;
+  margin-bottom: 10px 0 0 0;
+  font-size: 22px;
+}
+
 
 /*--------------------------------------------------------------
 # Why Us
