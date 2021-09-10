@@ -1084,7 +1084,7 @@ section {
 
 #add_recipe {
   width: 100%;
-  height: calc(100vh - 70px);
+  height: auto;
   background: url("../img/baked-eggplant-with-tomatoes-garlic-paprika.jpg") top center;
   background-size: cover;
   position: relative;
