@@ -111,9 +111,27 @@ def single_recipe(recipe_id):
     return render_template("single_recipe.html", recipe = recipe)
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
-    return render_template("add_recipe.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    if request.method == "POST":
+        new_recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_title": request.form.get("recipe_title"),
+            "recipe_summary": request.form.get("recipe_summary"),
+            "recipe_servings": request.form.get("recipe_servings"),
+            "recipe_ready_in": request.form.get("recipe_ready_in"),
+            "recipe_calories": request.form.get("recipe_calories"),
+            "recipe_ingredients": request.form.getlist("recipe_ingredients"),
+            "recipe_method": request.form.getlist("recipe_method"),
+            "recipe_image_url": request.form.get("recipe_image_url"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.insert_one(new_recipe)
+        flash("Recipe Successfully Added")
+        return redirect(url_for("add_recipe"))
+
+    return render_template("add_recipe.html", categories=categories)
 
 
 if __name__ == "__main__":
