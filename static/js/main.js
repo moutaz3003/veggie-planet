@@ -273,19 +273,21 @@
 
 let ingredient = 1;
 let maxIngredients = 20;
-let ingredientsField = document.querySelector(".add-recipe-ingredients-field");
-let addIngredient = document.querySelector(".add-ingredient-btn");
-let inputField = document.createElement("input");
-inputField.type = "text";
-inputField.name = "recipe_ingredients";
-inputField.className = "form-control mt-3 mb-3";
-inputField.id = "recipe_ingredients";
-inputField.placeholder = "Add ingredient, one at a time";
 
-addIngredient.addEventListener("click", function(e){
+let addIngredientButton = document.querySelector(".add-ingredient-btn");
+addIngredientButton.addEventListener("click", function(e) {
     e.preventDefault();
-    if(ingredient < maxIngredients){
+    if (ingredient < maxIngredients) {
         ingredient++;
-        ingredientsField.appendChild(inputField);
-    }    
+        let newDiv = document.createElement("div");
+        newDiv.innerHTML = `<div class="row"><div class="col-md-9 form-group mb-3">
+        <input type="text" name="recipe_ingredients" class="form-control" id="recipe_ingredients${ingredient}" placeholder="Add ingredient, then click Add Ingredient for more">
+        </div>
+        <div class="text-center col-md-3">
+        <button class="add-recipe-btn remove-ingredient-btn mb-3" type="submit"><i class="fas fa-minus"></i> Remove Ingredient</button>
+        </div></div>`
+        let ingredientsField = document.querySelector(".add-recipe-ingredients-field");
+        ingredientsField.appendChild(newDiv);
+
+    }
 });

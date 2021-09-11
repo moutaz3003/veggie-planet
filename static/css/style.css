@@ -1088,6 +1088,7 @@ section {
   background: url("../img/baked-eggplant-with-tomatoes-garlic-paprika.jpg") top center;
   background-size: cover;
   position: relative;
+  background-attachment: fixed;
   padding: 0;
 }
 
@@ -1254,6 +1255,16 @@ section {
   color: white;
 }
 
+.remove-ingredient-btn {
+  background: red;
+  padding: 10px 25px;
+  font-size: 0.8rem;
+}
+
+.remove-ingredient-btn:hover {
+  background: rgb(179, 2, 2);
+  color: white;
+}
 
 /*--------------------------------------------------------------
 # Why Us
