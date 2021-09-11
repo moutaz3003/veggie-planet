@@ -42,7 +42,7 @@
                     <!-- Recipe category_name and calories row-->
                     <div class="row">
                         <div class="col-md-6 form-group mb-3">
-                            <select class="form-select" name="category_name" id="category_name" aria-label="Default select example">
+                            <select class="form-select" name="category_name" id="category_name" aria-label="Meal category name" required>
                                 <option selected>Select Recipe Category</option>
                                 {% for category in categories %}
                                 <option value="{{ category.category_name|capitalize }}">

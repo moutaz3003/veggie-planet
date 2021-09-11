@@ -9,10 +9,11 @@
     </div>
 
     <div class="container" data-aos="fade-up">
-
-        <div class="col-lg-12 mt-0 mt-lg-0">
-            <div>
-                
+        <div class="row">
+            <div class="col-lg-12 mt-0 mt-lg-0">
+                {% for recipe in user_recipe %}
+                    {{ recipe }}
+                {% endfor %}
             </div>
         </div>
     </div>

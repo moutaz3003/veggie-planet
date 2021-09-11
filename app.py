@@ -84,6 +84,10 @@ def profile(username):
     #retrieve the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    
+    # #find recipes in database that have been created by user
+    # current_user = session["user"]
+    # user_recipe = mongo.db.find({"created_by": current_user.lower()})
 
     if session["user"]:
         return render_template("profile.html", username=username)
