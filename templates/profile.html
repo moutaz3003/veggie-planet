@@ -5,7 +5,7 @@
 <!-- Log in -->
 <section id="profile" class="profile">
     <div class="container" data-aos="fade-up">
-        <h2 class="section-title welcome-message text-center">Welcome {{ username|capitalize }}</h2>
+        <h2 class="section-title welcome-message text-center">{{ username|capitalize }}'s Profile</h2>
     </div>
     <hr class="mt-4 mb-4">
 
@@ -31,7 +31,7 @@
                 </div>
             </div>
             {% else %}
-                <h2>You haven't added any recipes yet</h2>
+                <h2 class="text-center mt-5 mb-5">You haven't added any recipes yet</h2>
             {% endfor %}
         </div>
     </div>
