@@ -17,25 +17,25 @@
                     <div class="row recipe_title">
                         <div class="col-md-12 form-group mb-3">
                             <input type="text" name="recipe_title" class="form-control" id="recipe_title"
-                                placeholder="Recipe Title" required>
+                                placeholder="Recipe Title" value="{{ recipe.recipe_title }}" required>
                         </div>
                     </div>
                     <!-- Recipe summary row-->
                     <div class="row">
                         <div class="col-md-12 form-group mb-3">
                             <input type="text" name="recipe_summary" class="form-control" id="recipe_summary"
-                                placeholder="Recipe Summary">
+                                value="{{ recipe.recipe_summary }}" placeholder="Recipe Summary">
                         </div>
                     </div>
                     <!-- Recipe servings & ready_in row -->
                     <div class="row">
                         <div class="col-md-6 form-group mb-3 mt-md-0">
                             <input type="number" class="form-control" name="recipe_servings" id="recipe_servings"
-                                placeholder="Serves how many people" required>
+                                placeholder="Serves how many people" value="{{ recipe.recipe_servings }}" required>
                         </div>
                         <div class="col-md-6 form-group mb-3 mt-md-0">
                             <input type="number" class="form-control" name="recipe_ready_in" id="recipe_ready_in"
-                                placeholder="Preparation time in minutes" required>
+                                placeholder="Preparation time in minutes" value="{{ recipe.recipe_ready_in }}" required>
                         </div>
                     </div>
                     <!-- Recipe category_name and calories row-->
@@ -51,36 +51,40 @@
                         </div>
                         <div class="col-md-6 form-group mb-3">
                             <input type="number" class="form-control" name="recipe_calories" id="recipe_calories"
-                                placeholder="Kcal Per Serving">
+                                value="{{ recipe.recipe_calories }}" placeholder="Kcal Per Serving">
                         </div>
                     </div>
                     <!-- Recipe ingredients row-->
+                    {% for ingredient in recipe.recipe_ingredients %}
                     <div class="row add-recipe-ingredients-field">
                         <div class="col-md-9 form-group mb-3 add-recipe-ingredients-field">
                             <input type="text" name="recipe_ingredients" class="form-control" id="recipe_ingredients"
-                                placeholder="Add ingredient, one at a time">
+                                value="{{ ingredient }}" placeholder="Add ingredient, one at a time">
                         </div>
                         <div class="text-center col-md-3">
                             <button class="add-recipe-btn add-ingredient-btn mb-3" type="submit"><i
                                     class="fas fa-plus"></i> Add Ingredient</button>
                         </div>
                     </div>
+                    {% endfor %}
                     <!-- Recipe Method row-->
+                    {% for step in recipe.recipe_method %}
                     <div class="row">
                         <div class="col-md-9 form-group mb-3">
                             <input type="text" name="recipe_method" class="form-control" id="recipe_method"
-                                placeholder="Add cooking method, one step at a time">
+                                value="{{ step }}" placeholder="Add cooking method, one step at a time">
                         </div>
                         <div class="text-center col-md-3 mb-3">
                             <button class="add-recipe-btn add-method-btn" type="submit"><i class="fas fa-plus"></i> Add
                                 Cooking Step</button>
                         </div>
                     </div>
+                    {% endfor %}
                     <!-- Recipe image URL row-->
                     <div class="row">
                         <div class="col-md-12 form-group mb-3">
                             <input type="url" name="recipe_image_url" class="form-control" id="recipe_image_url"
-                                placeholder="Place image URL here">
+                                value="{{ recipe.recipe_image_url }}" placeholder="Place image URL here">
                         </div>
                     </div>
                     <!-- Add recipe button-->

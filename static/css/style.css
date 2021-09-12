@@ -1144,6 +1144,10 @@ section {
   padding-bottom: 8px;
 }
 
+.add-recipe-form label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
  .add-recipe-form .validate {
   display: none;
   color: red;

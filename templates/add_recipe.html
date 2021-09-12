@@ -17,31 +17,37 @@
                     <!-- Recipe Title row-->
                     <div class="row recipe_title">
                         <div class="col-md-12 form-group mb-3">
+                            <label class="mb-2" for="recipe_title"><i class="fas fa-file-signature"></i> Recipe Title</label>
                             <input type="text" name="recipe_title" class="form-control" id="recipe_title"
-                                placeholder="Recipe Title" required>
+                                placeholder="Name of your recipe" required>
+                            
                         </div>
                     </div>
                     <!-- Recipe summary row-->
                     <div class="row">
                         <div class="col-md-12 form-group mb-3">
+                            <label class="mb-2" for="recipe_summary"><i class="fas fa-comments"></i> Recipe Summary</label>
                             <input type="text" name="recipe_summary" class="form-control" id="recipe_summary"
-                                placeholder="Recipe Summary">
+                                placeholder="Describe your recipe briefly">
                         </div>
                     </div>
                     <!-- Recipe servings & ready_in row -->
                     <div class="row">
                         <div class="col-md-6 form-group mb-3 mt-md-0">
+                            <label class="mb-2" for="recipe_servings"><i class="fas fa-user-friends"></i> Servings</label>
                             <input type="number" class="form-control" name="recipe_servings" id="recipe_servings"
-                                placeholder="Serves how many people" required>
+                                placeholder="For how many people?" required>
                         </div>
                         <div class="col-md-6 form-group mb-3 mt-md-0">
+                            <label class="mb-2" for="recipe_ready_in"><i class="fas fa-hourglass-half"></i> Cooking Time:</label>
                             <input type="number" class="form-control" name="recipe_ready_in" id="recipe_ready_in"
-                                placeholder="Preparation time in minutes" required>
+                                placeholder="Preparation plus cooking time in minutes" required>
                         </div>
                     </div>
                     <!-- Recipe category_name and calories row-->
                     <div class="row">
                         <div class="col-md-6 form-group mb-3">
+                            <label class="mb-2" for="category_name"><i class="fas fa-utensils"></i> Category:</label>
                             <select class="form-select" name="category_name" id="category_name" aria-label="Meal category name" required>
                                 <option selected>Select Recipe Category</option>
                                 {% for category in categories %}
@@ -51,6 +57,7 @@
                             </select>
                         </div>
                         <div class="col-md-6 form-group mb-3">
+                            <label class="mb-2" for="recipe_calories"><i class="fas fa-fire"></i> Calories:</label>
                             <input type="number" class="form-control" name="recipe_calories" id="recipe_calories"
                                 placeholder="Kcal Per Serving">
                         </div>
@@ -58,21 +65,23 @@
                     <!-- Recipe ingredients row-->
                     <div class="row add-recipe-ingredients-field">
                         <div class="col-md-9 form-group mb-3 add-recipe-ingredients-field">
+                            <label class="mb-2" for="recipe_ingredients"><i class="fas fa-carrot"></i> Ingredients:</label>
                             <input type="text" name="recipe_ingredients" class="form-control" id="recipe_ingredients"
-                                placeholder="Add ingredient, one at a time">
+                                placeholder="Add one ingredient at a time, then click 'Add Ingredient'">
                         </div>
                         <div class="text-center col-md-3">
-                            <button class="add-recipe-btn add-ingredient-btn mb-3" type="submit"><i class="fas fa-plus-circle"></i>
+                            <button class="add-recipe-btn add-ingredient-btn mt-4 mb-3" type="submit"><i class="fas fa-plus-circle"></i>
                                  Add Ingredient</button>
                         </div>
                     </div>
                     <!-- Recipe Method row-->
                     <div class="row">
                         <div class="col-md-9 form-group mb-3">
+                            <label class="mb-2" for="recipe_method"><i class="fas fa-pencil-alt"></i> Cooking Method:</label>
                             <input type="text" name="recipe_method" class="form-control" id="recipe_method"
-                                placeholder="Add cooking method, one step at a time">
+                                placeholder="Add one cooking instruction at a time, then click 'Add Cooking Step'">
                         </div>
-                        <div class="text-center col-md-3 mb-3">
+                        <div class="text-center col-md-3 mt-4 mb-3">
                             <button class="add-recipe-btn add-method-btn" type="submit"><i class="fas fa-plus-circle"></i> Add
                                 Cooking Step</button>
                         </div>
@@ -80,6 +89,7 @@
                     <!-- Recipe image URL row-->
                     <div class="row">
                         <div class="col-md-12 form-group mb-3">
+                            <label class="mb-2" for="recipe_image_url"><i class="fas fa-link"></i> Recipe Image:</label>
                             <input type="url" name="recipe_image_url" class="form-control" id="recipe_image_url"
                                 placeholder="Place image URL here">
                         </div>
