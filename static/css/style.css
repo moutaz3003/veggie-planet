@@ -1632,12 +1632,35 @@ section {
 }
 
 #profile .section-title {
-  padding-top: 15px;
+  padding: 15px 0 25px 0;
 }
 
 .welcome-message {
   margin-top: 20px;
   margin-top: 0;
+  color: #cda45e;
+}
+
+.profile-recipe-card-container 
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #000;
+    background-clip: border-box;
+    border: 1.5px solid #CDA45E;
+    border-radius: 0;
+}
+
+.profile-recipe-card-body {
+  background: black;
+  text-align: center;
+  padding: 15px;
+}
+
+.profile-recipe-card-title {
   color: #cda45e;
 }
 

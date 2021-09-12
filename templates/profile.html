@@ -9,12 +9,22 @@
     </div>
 
     <div class="container" data-aos="fade-up">
-        <div class="row">
-            <div class="col-lg-12 mt-0 mt-lg-0">
-                {% for recipe in user_recipe %}
-                    {{ recipe }}
-                {% endfor %}
+        <div class="row d-flex justify-content-center">
+            {% for recipe in recipes if session.user|lower == recipe.created_by|lower %}
+            <div class="col-sm-12 col-md-6 col-lg-3 mt-0 mb-2 mt-lg-0 d-flex justify-content-center profile-recipe-card-container">
+                <div class="profile-recipe-card card" style="width: 20rem;">
+                    <img class="profile-recipe-card-img-top" src="{{ recipe.recipe_image_url }}" alt="Recipe Image">
+                    <div class="profile-recipe-card-body">
+                        <h5 class="profile-recipe-card-title">{{ recipe.recipe_title }}</h5>
+                        <p class="card-text">{{ recipe.recipe_summary }}</p>
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-primary">Delete</a>
+                    </div>
+                </div>
             </div>
+            {% else %}
+            <h2>You haven't added any recipes yet</h2>
+            {% endfor %}
         </div>
     </div>
 
