@@ -1639,6 +1639,8 @@ section {
 
 #profile {
   padding-top: 0;
+  background: rgb(39,32,19);
+background: radial-gradient(circle, rgba(39,32,19,1) 0%, rgba(0,0,0,1) 100%);
 }
 
 #profile .section-title {
