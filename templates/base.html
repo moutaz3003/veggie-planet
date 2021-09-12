@@ -84,6 +84,18 @@
     </header>
     <!--=========== End Header ========-->
 
+    <!-- ======= Flash Messaages ======= -->
+    <section class="flash-messages my-auto">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="my-auto">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+    <!-- ======= End Flash Messaages ======= -->
+
     {% block content %}
 
     {% endblock %}
