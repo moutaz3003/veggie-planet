@@ -1146,6 +1146,7 @@ section {
 
 .add-recipe-form label {
   color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
 }
 
  .add-recipe-form .validate {
