@@ -1270,15 +1270,16 @@ section {
   background: #cda45e;
   border: 0;
   padding: 10px 35px;
-  color: #fff;
+  color:black;
   transition: 0.4s;
   border-radius: 50px;
 }
 
  .add-recipe-btn:hover,
- .recipe-button:hover {
-  background: #d3af71;
-  color: black;
+ .recipe-button:hover,
+ .cancel-edit-btn:hover {
+  background: #856e48;
+  color: white;
 }
 
 .add-method-btn,

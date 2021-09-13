@@ -13,20 +13,23 @@
 
             <div class="col-lg-12 mt-5 mt-lg-0">
 
-                <form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST" role="form" class="add-recipe-form mt-5">
+                <form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST" role="form"
+                    class="add-recipe-form mt-5">
                     <!-- Recipe Title row-->
                     <div class="row recipe_title">
                         <div class="col-md-12 form-group mb-3">
-                            <label class="mb-2" for="recipe_title"><i class="fas fa-file-signature"></i> Recipe Title:</label>
+                            <label class="mb-2" for="recipe_title"><i class="fas fa-file-signature"></i> Recipe
+                                Title:</label>
                             <input type="text" name="recipe_title" class="form-control" id="recipe_title"
                                 placeholder="Name of your recipe" value="{{ recipe.recipe_title }}" required>
-                            
+
                         </div>
                     </div>
                     <!-- Recipe summary row-->
                     <div class="row">
                         <div class="col-md-12 form-group mb-3">
-                            <label class="mb-2" for="recipe_summary"><i class="fas fa-comments"></i> Recipe Summary:</label>
+                            <label class="mb-2" for="recipe_summary"><i class="fas fa-comments"></i> Recipe
+                                Summary:</label>
                             <input type="text" name="recipe_summary" class="form-control" id="recipe_summary"
                                 value="{{recipe.recipe_summary}}" placeholder="Describe your recipe briefly">
                         </div>
@@ -34,25 +37,34 @@
                     <!-- Recipe servings & ready_in row -->
                     <div class="row">
                         <div class="col-md-6 form-group mb-3 mt-md-0">
-                            <label class="mb-2" for="recipe_servings"><i class="fas fa-user-friends"></i> Servings:</label>
+                            <label class="mb-2" for="recipe_servings"><i class="fas fa-user-friends"></i>
+                                Servings:</label>
                             <input type="number" class="form-control" name="recipe_servings" id="recipe_servings"
                                 value="{{ recipe.recipe_servings }}" placeholder="For how many people?" required>
                         </div>
                         <div class="col-md-6 form-group mb-3 mt-md-0">
-                            <label class="mb-2" for="recipe_ready_in"><i class="fas fa-hourglass-half"></i> Cooking Time:</label>
+                            <label class="mb-2" for="recipe_ready_in"><i class="fas fa-hourglass-half"></i> Cooking
+                                Time:</label>
                             <input type="number" class="form-control" name="recipe_ready_in" id="recipe_ready_in"
-                                value="{{ recipe.recipe_ready_in }}" placeholder="Preparation plus cooking time in minutes" required>
+                                value="{{ recipe.recipe_ready_in }}"
+                                placeholder="Preparation plus cooking time in minutes" required>
                         </div>
                     </div>
                     <!-- Recipe category_name and calories row-->
                     <div class="row">
                         <div class="col-md-6 form-group mb-3">
                             <label class="mb-2" for="category_name"><i class="fas fa-utensils"></i> Category:</label>
-                            <select class="form-select" name="category_name" id="category_name" aria-label="Meal category name" required>
+                            <select class="form-select" name="category_name" id="category_name"
+                                aria-label="Meal category name" required>
                                 <option selected>Select Recipe Category</option>
                                 {% for category in categories %}
-                                <option value="{{ category.category_name|capitalize }}">
-                                    {{ category.category_name|capitalize }}</option>
+                                    {% if category.category_name == recipe.category_name %}
+                                    <option value="{{ category.category_name|capitalize }}" selected>
+                                        {{ recipe.category_name|capitalize }}</option>
+                                    {% else %}
+                                    <option value="{{ category.category_name|capitalize }}">
+                                        {{ category.category_name|capitalize }}</option>
+                                    {% endif %}
                                 {% endfor %}
                             </select>
                         </div>
@@ -66,13 +78,16 @@
                     {% for ingredient in recipe.recipe_ingredients %}
                     <div class="row add-recipe-ingredients-field">
                         <div class="col-md-9 form-group mb-3 add-recipe-ingredients-field">
-                            <label class="mb-2" for="recipe_ingredients"><i class="fas fa-carrot"></i> Ingredient:</label>
+                            <label class="mb-2" for="recipe_ingredients"><i class="fas fa-carrot"></i>
+                                Ingredient:</label>
                             <input type="text" name="recipe_ingredients" class="form-control" id="recipe_ingredients"
-                                value="{{ ingredient }}" placeholder="Add one ingredient at a time, then click 'Add Ingredient'">
+                                value="{{ ingredient }}"
+                                placeholder="Add one ingredient at a time, then click 'Add Ingredient'">
                         </div>
                         <div class="text-center col-md-3">
-                            <button class="add-recipe-btn remove-ingredient-btn mt-4 mb-3" type="submit"><i class="fas fa-minus-circle"></i>
-                                 Remove Ingredient</button>
+                            <button class="add-recipe-btn remove-ingredient-btn mt-4 mb-3" type="submit"><i
+                                    class="fas fa-minus-circle"></i>
+                                Remove Ingredient</button>
                         </div>
                     </div>
                     {% endfor %}
@@ -80,12 +95,15 @@
                     {% for step in recipe.recipe_method %}
                     <div class="row">
                         <div class="col-md-9 form-group mb-3">
-                            <label class="mb-2" for="recipe_method"><i class="fas fa-pencil-alt"></i> Cooking Method:</label>
+                            <label class="mb-2" for="recipe_method"><i class="fas fa-pencil-alt"></i> Cooking
+                                Method:</label>
                             <input type="text" name="recipe_method" class="form-control" id="recipe_method"
-                                value="{{ step }}" placeholder="Add one cooking instruction at a time, then click 'Add Cooking Step'">
+                                value="{{ step }}"
+                                placeholder="Add one cooking instruction at a time, then click 'Add Cooking Step'">
                         </div>
                         <div class="text-center col-md-3 mt-4 mb-3">
-                            <button class="add-recipe-btn add-method-btn" type="submit"><i class="fas fa-plus-circle"></i> Add
+                            <button class="add-recipe-btn add-method-btn" type="submit"><i
+                                    class="fas fa-plus-circle"></i> Add
                                 Cooking Step</button>
                         </div>
                     </div>
@@ -98,9 +116,13 @@
                                 value="{{ recipe.recipe_image_url }}" placeholder="Place image URL here">
                         </div>
                     </div>
-                    <!-- Add recipe button-->
-                    <div class="text-center"><button class="add-recipe-btn" type="submit">
-                        <i class="fas fa-edit"></i> Update Recipe</button></div>
+                    <!-- Edit recipe button-->
+                    <div class="text-center">
+                        <button class="add-recipe-btn" type="submit">
+                            <i class="fas fa-edit"></i> Update Recipe</button>
+                        <a href="{{ url_for('profile', username=session['user']) }}" class="add-recipe-btn cancel-edit-btn">
+                            <i class="fas fa-times-circle"></i> Cancel</a>
+                    </div>
                 </form>
 
             </div>

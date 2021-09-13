@@ -80,7 +80,7 @@ def login():
     return render_template("login.html")
 
 
-#------------- Profile -----------------------
+#------------- User profile page -----------------------
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     #retrieve the session user's username from the database
@@ -90,7 +90,8 @@ def profile(username):
     recipes = mongo.db.recipes.find()
 
     if session["user"]:
-        return render_template("profile.html", username=username, recipes=recipes)
+        return render_template("profile.html", 
+        username=username, recipes=recipes)
 
     return redirect(url_for("login"))
 
@@ -115,7 +116,7 @@ def find_recipes():
 @app.route("/recipe/<recipe_id>")
 def single_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
-    return render_template("single_recipe.html", recipe = recipe)
+    return render_template("single_recipe.html", recipe=recipe)
 
 
 #------------- Add Recipe -----------------------
@@ -146,7 +147,9 @@ def add_recipe():
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("edit_recipe.html", recipe=recipe)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_recipe.html", recipe=recipe, 
+                        categories=categories)
 
 
 if __name__ == "__main__":
