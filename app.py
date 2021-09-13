@@ -146,10 +146,26 @@ def add_recipe():
 #------------- Edit Recipe -----------------------
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    if request.method == "POST":
+        edited_recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_title": request.form.get("recipe_title"),
+            "recipe_summary": request.form.get("recipe_summary"),
+            "recipe_servings": request.form.get("recipe_servings"),
+            "recipe_ready_in": request.form.get("recipe_ready_in"),
+            "recipe_calories": request.form.get("recipe_calories"),
+            "recipe_ingredients": request.form.getlist("recipe_ingredients"),
+            "recipe_method": request.form.getlist("recipe_method"),
+            "recipe_image_url": request.form.get("recipe_image_url"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edited_recipe)
+        flash("Recipe Successfully Updated")
+        return redirect(url_for("profile", username=session["user"]))
+
+    recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_recipe.html", recipe=recipe, 
-                        categories=categories)
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
 if __name__ == "__main__":
