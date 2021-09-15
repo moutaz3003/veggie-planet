@@ -1090,7 +1090,7 @@ section {
 #add_recipe {
   width: 100%;
   height: auto;
-  background: url("../img/colorful-spices.png") top center;
+  background: url("../img/home-hero.png") top center;
   background-size: cover;
   position: relative;
   background-attachment: fixed;
@@ -1676,6 +1676,10 @@ background: radial-gradient(circle, rgba(39,32,19,1) 0%, rgba(0,0,0,1) 100%);
 
 .profile-recipe-card-title {
   color: #cda45e;
+}
+
+.profile-recipe-card-img-top {
+  height: 300px;
 }
 
 .btn-info, .btn-danger {
