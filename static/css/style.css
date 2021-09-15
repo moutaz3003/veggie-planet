@@ -421,7 +421,7 @@ h6 {
 #hero {
   width: 100%;
   height: calc(100vh - 70px);
-  background: url("../img/baked-eggplant-with-tomatoes-garlic-paprika.jpg") top center;
+  background: url("../img/home-hero.png") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -730,7 +730,7 @@ section {
 --------------------------------------------------------------*/
 
 .about {
-  background: url("../img/couple-cooking.jpg") center center;
+  background: url("../img/couple-cooking.png") center center;
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -838,7 +838,7 @@ section {
 --------------------------------------------------------------*/
 
 .find_recipe {
-  background: url("../img/couple-cooking.jpg") center center;
+  background: url("../img/couple-cooking.png") center center;
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -953,7 +953,7 @@ section {
 --------------------------------------------------------------*/
 
 .single_recipe {
-  background: url("../img/couple-cooking.jpg") center center;
+  background: url("../img/couple-cooking.png") center center;
   background-size: cover;
   position: relative;
   padding: 20px 0;
@@ -1090,7 +1090,7 @@ section {
 #add_recipe {
   width: 100%;
   height: auto;
-  background: url("../img/baked-eggplant-with-tomatoes-garlic-paprika.jpg") top center;
+  background: url("../img/colorful-spices.png") top center;
   background-size: cover;
   position: relative;
   background-attachment: fixed;
