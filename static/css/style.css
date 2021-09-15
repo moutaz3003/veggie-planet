@@ -1283,9 +1283,10 @@ section {
 }
 
 .add-method-btn,
-.add-ingredient-btn {
+.add-ingredient-btn
+ {
   background: green;
-  padding: 10px 25px;
+  padding: 5px;
   font-size: 0.8rem;
 }
 
@@ -1297,7 +1298,7 @@ section {
 
 .remove-ingredient-btn {
   background: red;
-  padding: 10px 25px;
+  padding: 5px;
   font-size: 0.8rem;
 }
 

@@ -62,30 +62,27 @@
                                 placeholder="Kcal Per Serving">
                         </div>
                     </div>
+
                     <!-- Recipe ingredients row-->
                     <div class="row add-recipe-ingredients-field">
-                        <div class="col-md-9 form-group mb-3 add-recipe-ingredients-field">
+                        <div class="col-md-9 form-group mb-3">
                             <label class="mb-2" for="recipe_ingredients"><i class="fas fa-carrot"></i> Ingredients:</label>
-                            <input type="text" name="recipe_ingredients" class="form-control" id="recipe_ingredients"
-                                placeholder="Add one ingredient at a time, then click 'Add Ingredient'">
+                            <input type="text" name="recipe_ingredients" class="form-control" id="ingredient-input" placeholder="Add one ingredient at a time, then click 'Add Ingredient'">
                         </div>
-                        <div class="text-center col-md-3">
-                            <button class="add-recipe-btn add-ingredient-btn mt-4 mb-3" type="submit"><i class="fas fa-plus-circle"></i>
-                                 Add Ingredient</button>
-                        </div>
+
+                        <button class="col-md-3 col-sm-9 mx-auto mt-4 mb-3 mt-sm-2 add-ingredient-btn add-recipe-btn" type="submit"><i class="fas fa-plus-circle"></i> Add Ingredient</button>
                     </div>
+                    
                     <!-- Recipe Method row-->
-                    <div class="row">
+                    <div class="row add-method-field">
                         <div class="col-md-9 form-group mb-3">
                             <label class="mb-2" for="recipe_method"><i class="fas fa-pencil-alt"></i> Cooking Method:</label>
-                            <input type="text" name="recipe_method" class="form-control" id="recipe_method"
-                                placeholder="Add one cooking instruction at a time, then click 'Add Cooking Step'">
+                            <input type="text" name="recipe_method" class="form-control" id="recipe_method" placeholder="Add one cooking instruction at a time, then click 'Add Cooking Step'">
                         </div>
-                        <div class="text-center col-md-3 mt-4 mb-3">
-                            <button class="add-recipe-btn add-method-btn" type="submit"><i class="fas fa-plus-circle"></i> Add
+                        <button class="col-md-3 col-sm-9 mx-auto mt-4 mb-3 add-recipe-btn add-method-btn" type="submit"><i class="fas fa-plus-circle"></i> Add
                                 Cooking Step</button>
-                        </div>
                     </div>
+
                     <!-- Recipe image URL row-->
                     <div class="row">
                         <div class="col-md-12 form-group mb-3">

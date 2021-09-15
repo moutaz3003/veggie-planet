@@ -271,23 +271,145 @@
 
 })()
 
-let ingredient = 1;
-let maxIngredients = 20;
 
-let addIngredientButton = document.querySelector(".add-ingredient-btn");
-addIngredientButton.addEventListener("click", function(e) {
-    e.preventDefault();
-    if (ingredient < maxIngredients) {
-        ingredient++;
-        let newDiv = document.createElement("div");
-        newDiv.innerHTML = `<div class="row"><div class="col-md-9 form-group mb-3">
-        <input type="text" name="recipe_ingredients" class="form-control" id="recipe_ingredients${ingredient}" placeholder="Add ingredient, then click Add Ingredient for more">
-        </div>
-        <div class="text-center col-md-3">
-        <button class="add-recipe-btn remove-ingredient-btn mb-3" type="submit"><i class="fas fa-minus"></i> Remove Ingredient</button>
-        </div></div>`
-        let ingredientsField = document.querySelector(".add-recipe-ingredients-field");
-        ingredientsField.appendChild(newDiv);
 
+// Add and Remove ingredient buttons:
+
+const ingredientRow = document.querySelector(".ingredients-row");
+const ingredientContainer = document.querySelector(".add-recipe-ingredients-field");
+const addIngredientInput = document.getElementById("ingredient-input");
+const addIngredientButton = document.querySelector(".add-ingredient-btn");
+const extraIngredients = document.querySelector(".extra-ingredients");
+
+let nextIngredientId = 1;
+
+addIngredientButton.addEventListener("click", addIngredient);
+
+function addIngredient(event) {
+    event.preventDefault();
+    let newIngredientContainer = document.createElement("div");
+    newIngredientContainer.classList = "col-md-9 form-group mb-3";
+
+
+    let newIngredientInputElement = document.createElement("input");
+    newIngredientInputElement.id = `ingredient-input`;
+    newIngredientInputElement.dataset.id = `${nextIngredientId}`;
+    newIngredientInputElement.classList = "form-control";
+    newIngredientInputElement.type = "text";
+    newIngredientInputElement.value = addIngredientInput.value;
+    newIngredientInputElement.value = "";
+    newIngredientInputElement.placeholder = `Ingredient..`;
+    newIngredientInputElement.name = "recipe_ingredients";
+
+    let removeIngredientButton = document.createElement("button");
+    removeIngredientButton.dataset.id = `${nextIngredientId}`;
+    removeIngredientButton.classList = "col-md-3 col-sm-9 mx-auto mt-0 mb-3 remove-ingredient-btn ingredient-button";
+    removeIngredientButton.innerText = "Remove Ingredient";
+
+    removeIngredientButton.addEventListener("click", removeIngredient);
+
+    newIngredientContainer.appendChild(newIngredientInputElement);
+    ingredientContainer.appendChild(newIngredientContainer);
+    ingredientContainer.appendChild(removeIngredientButton);
+    nextIngredientId += 1;
+}
+
+
+function removeIngredient(event) {
+    event.preventDefault();
+    let removebtns = document.querySelectorAll(".remove-ingredient-btn");
+    let inputs = document.querySelectorAll(`input[data-id]`);
+    for (let i = 0; i < removebtns.length; i++) {
+        removebtns[i].addEventListener("click", function(event) {
+            if (this.dataset.id == inputs[i].dataset.id) {
+                inputs[i].remove();
+                this.remove();
+            }
+        });
     }
-});
+    nextIngredientId -= 1;
+}
+
+
+// Add and Remove ingredient buttons:
+const methodContainer = document.querySelector(".add-method-field");
+const addInstructionInput = document.getElementById("recipe_method");
+const addInstructionButton = document.querySelector(".add-method-btn");
+
+let nextInstructionId = 1;
+
+addInstructionButton.addEventListener("click", addInstruction);
+
+function addInstruction(event) {
+    event.preventDefault();
+    let newMethodContainer = document.createElement("div");
+    newMethodContainer.classList = "col-md-9 form-group mb-3";
+
+
+    let newMethodInputElement = document.createElement("input");
+    newMethodInputElement.id = `recipe_method`;
+    newMethodInputElement.dataset.instruction = `${nextInstructionId}`;
+    newMethodInputElement.classList = "form-control";
+    newMethodInputElement.type = "text";
+    newMethodInputElement.value = addInstructionInput.value;
+    newMethodInputElement.value = "";
+    newMethodInputElement.placeholder = `Instruction..`;
+    newMethodInputElement.name = "recipe_method";
+
+    let removeInstructionButton = document.createElement("button");
+    removeInstructionButton.dataset.instruction = `${nextInstructionId}`;
+    removeInstructionButton.classList = "col-md-3 col-sm-9 mx-auto mt-0 mb-3 remove-method-btn";
+    removeInstructionButton.innerText = "Remove Instruction";
+
+    removeInstructionButton.addEventListener("click", removeInstruction);
+
+    newMethodContainer.appendChild(newMethodInputElement);
+    methodContainer.appendChild(newMethodContainer);
+    methodContainer.appendChild(removeInstructionButton);
+    nextInstructionId += 1;
+}
+
+
+function removeInstruction(event) {
+    event.preventDefault();
+    let removebtns = document.querySelectorAll(".remove-method-btn");
+    let inputs = document.querySelectorAll(`input[data-instruction]`);
+    for (let i = 0; i < removebtns.length; i++) {
+        removebtns[i].addEventListener("click", function(event) {
+            if (this.dataset.instruction == inputs[i].dataset.instruction) {
+                inputs[i].remove();
+                this.remove();
+            }
+        });
+    }
+    nextInstructionId -= 1;
+}
+
+// // Add Ingredient Button
+
+// let ingredient = 1;
+// let maxIngredients = 20;
+
+// let addIngredientButton = document.querySelector(".add-ingredient-btn");
+// addIngredientButton.addEventListener("click", function(e) {
+//     e.preventDefault();
+//     if (ingredient < maxIngredients) {
+//         ingredient++;
+//         let newDiv = document.createElement("div");
+//         newDiv.innerHTML = `<div class="row"><div class="col-md-9 form-group mb-3">
+//         <input type="text" name="recipe_ingredients" class="form-control" id="recipe_ingredients${ingredient}" placeholder="Add ingredient, then click Add Ingredient or press 'Enter' for more">
+//         </div>
+//         <div class="text-center col-md-3">
+//         <button class="add-recipe-btn remove-ingredient-btn mb-3" type="submit"><i class="fas fa-minus"></i> Remove Ingredient</button>
+//         </div></div>`
+//         let ingredientsField = document.querySelector(".add-recipe-ingredients-field");
+//         ingredientsField.appendChild(newDiv);
+
+//     }
+// });
+
+// //remove button
+// $("section").on('click', ".remove-ingredient-btn", function() {
+//     $(this).parent('div').parent('div').remove();
+//     ingredient--;
+// });
