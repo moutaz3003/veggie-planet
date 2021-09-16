@@ -112,6 +112,12 @@ def meat_alternatives():
     return render_template("meat_alternatives.html")
 
 
+#------------ Milk alternatives------------------
+@app.route("/milk_alternatives")
+def milk_alternatives():
+    return render_template("milk_alternatives.html")
+
+
 #------------- Recipes page -----------------------
 @app.route("/find_recipes")
 def find_recipes():
