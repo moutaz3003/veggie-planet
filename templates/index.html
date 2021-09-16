@@ -15,8 +15,12 @@ Veggie Planet | Home
                 <h2>Search, Share & Cook Vegan Recipes</h2>
 
                 <div class="btns">
-                    <a href="{{ url_for('find_recipes') }}" class="btn-menu animated fadeInUp scrollto">Search Recipe</a>
+                    {% if session.user %}
+                    <a href="{{ url_for('find_recipes') }}" class="btn-menu animated fadeInUp scrollto">Search Recipes</a>
+                    {% else %}
+                    <a href="{{ url_for('find_recipes') }}" class="btn-menu animated fadeInUp scrollto">Search Recipes</a>
                     <a href="{{ url_for('signup') }}" class="signup-btn animated fadeInUp scrollto">Sign Up</a>
+                    {% endif %}
                 </div>
             </div>
             <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in"
