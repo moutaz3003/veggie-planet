@@ -100,3 +100,24 @@ Below is a table outlining what is visible to members and non members:
 | Log Out | ✔      |    ❌ |
 | My Profile | ✔      |    ❌ |
 | Add Recipe | ✔      |    ❌ |
+
+
+Accessing the "My Profile" page enables user to edit or delete recipe, both of which are also options not availabe to non members
+
+## Design Structure
+The website used a template that is free to use by [BootstrapMade](https://bootstrapmade.com/) called Restaurantly, after receiving permission to use this template for the purposes of my project. I have however modified the template and tailored it to my own needs, using slightly different colour schemes and free/license-free images from [Unsplash](https://unsplash.com/). The template comes with a few libraries including bootstrap, animate css for smooth animations, swiper touch slider, but I have also decided to use AOS on-scroll animation library, glightbox for interactive image animations on hover.
+
+## Fonts
+Three fonts from google fonts have been used to embed the following fonts: 
+
+* "Poppins" for H1's that have been made to have a small font for a more modern feel. 
+* "Playfair Display" for headers, which in fact are a further elaboration of the H1 title, and 
+* "Open Sans" for content including paragraphs, list items including recipe methods, ingredients and Navbar list items.  
+
+## Colours
+
+The main colours used were various shades of black using RGBA, and in order to break the contrast, #cda45e, a version of beige has been used for buttons, headers, borders of a variety of elements including input fields.
+
+## Icons
+
+I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have used throughout the website.
