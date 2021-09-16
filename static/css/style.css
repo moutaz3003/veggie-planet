@@ -28,6 +28,25 @@ h6 {
   font-family: "Playfair Display", serif;
 }
 
+.button-general {
+  background: #cda45e;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.reset {
+  background: #18d26e;
+  margin-left: 5px;
+  padding: 11px 35px;
+}
+
+.reset:hover {
+  color: white;
+  background: green;
+}
 
 /*--------------------------------------------------------------
 # Preloader
