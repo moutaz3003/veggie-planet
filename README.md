@@ -63,7 +63,7 @@ This site targets visitors who are interested in vegan recipes, and would like t
 * To create an account, be able to log into account
 * To be able to add, edit and delete user's own recipes and contribute to database of vegan recipes
 
-## Site Owner's Goals
+### Site Owner's Goals
 
 * To promote vegan movement and vegan lifestyle
 * To convince user that vegan food is very delicious
@@ -71,11 +71,11 @@ This site targets visitors who are interested in vegan recipes, and would like t
 * To highlight the health benefit of a vegan diet
 * To highlight substitutes for carnivorous diets.
 
-## Strategy
+### Strategy
 
 The design goal is to make a clear, intuitive, accessible, structured websitesite that allows visitors to easily find recipes, ingredients, and instructions, have clear call to action buttons encounraging users to register in order to add, edit and delete their own recipes. Links between various pages are intended to be very intuitive to allow for easy navigation.
 
-## Scope
+### Scope
 
 The site consists of a home page comprised of a navigation bar, with a number of options available for all users, and a profile option consisting of a dropdown menu, that is only available to registered users. The profile section allows access to the user's own profile on which they can view their contribution of recipes, with the choice to edit or delete said recipes. It also allows access to the "Add Recipe" page in which a user can add a recipe title, recipe summary, number of servings, calories per serving, cooking and preperation time, ingredients and instructions. The sign Up button only appears to non-registered users. 
 
@@ -104,20 +104,20 @@ Below is a table outlining what is visible to members and non members:
 
 Accessing the "My Profile" page enables user to edit or delete recipe, both of which are also options not availabe to non members
 
-## Design Structure
+### Design Structure
 The website used a template that is free to use by [BootstrapMade](https://bootstrapmade.com/) called Restaurantly, after receiving permission to use this template for the purposes of my project. I have however modified the template and tailored it to my own needs, using slightly different colour schemes and free/license-free images from [Unsplash](https://unsplash.com/). The template comes with a few libraries including bootstrap, animate css for smooth animations, swiper touch slider, but I have also decided to use AOS on-scroll animation library, glightbox for interactive image animations on hover.
 
-## Fonts
+### Fonts
 Three fonts from google fonts have been used to embed the following fonts: 
 
 * "Poppins" for H1's that have been made to have a small font for a more modern feel. 
 * "Playfair Display" for headers, which in fact are a further elaboration of the H1 title, and 
 * "Open Sans" for content including paragraphs, list items including recipe methods, ingredients and Navbar list items.  
 
-## Colours
+### Colours
 
 The main colours used were various shades of black using RGBA, and in order to break the contrast, #cda45e, a version of beige has been used for buttons, headers, borders of a variety of elements including input fields.
 
-## Icons
+### Icons
 
 I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have used throughout the website.
