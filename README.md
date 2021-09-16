@@ -89,11 +89,11 @@ Following that is a section featuring a carousel that helps the user find plant 
 
 Below is a table outlining what is visible to members and non members:
 
-| Nav Bar   | Logged in | Not Logged in  |
-| ----------|:------ :| -----:|
-| Home      |  ✔      | ✔ |
-| About     |  ✔      | ✔ |
-| Recipes   |  ✔      | ✔ |
-| Contact   |  ✔      | ✔ |
-| Signup    |  ❌     | ✔ |
-| Log in    |  ❌     | ✔ |
+| Nav Bar   |    Logged in |    Not Logged in  |
+| ---------:|------ :| -----:|
+| Home      |    ✔      |    ✔ |
+| About     |    ✔      |    ✔ |
+| Recipes   |    ✔      |    ✔ |
+| Contact   |    ✔      |    ✔ |
+| Signup    |    ❌     |    ✔ |
+| Log in    |    ❌     |    ✔ |
