@@ -121,3 +121,28 @@ The main colours used were various shades of black using RGBA, and in order to b
 ### Icons
 
 I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have used throughout the website.
+
+***
+
+## Features
+
+### Existing Features
+
+* See overview of multiple recipes, by displaying title, summary, image, servings and cooking time
+* See specific recipe details by clicking on view recipe button
+* Clear, intuitive page navigation
+* Educational features presented using interactive elements such as slider, cards, and video button
+* Use of images and scroll animations for a greater user experience
+* Register account, log in and log out features
+* View, add, edit and delete recipes
+
+### Features To Be Incorporated In The Future
+
+* Using vegan recipe API for a rich database
+* Allow users to search recipes based on categories
+* Allow users to comment on recipes 
+* Incorporate blog to allow members to discuss relevant matters
+* Incorporate share features to allow users to share recipes and pages on social media
+* Favourite button that allows users to save preferred recipes and view saved recipes on their profiles
+* Provide print-only version of recipes that allows users to print favourite recipes
+* Incorporate section that allows users to enter available ingredients and suggest a recipe based on entered ingredients
