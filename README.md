@@ -97,3 +97,6 @@ Below is a table outlining what is visible to members and non members:
 | Contact | ✔      |    ✔ |
 | Signup | ❌      |    ✔ |
 | Log in | ❌      |    ✔ |
+| Log Out | ✔      |    ❌ |
+| My Profile | ✔      |    ❌ |
+| Add Recipe | ✔      |    ❌ |
