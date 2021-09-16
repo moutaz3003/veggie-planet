@@ -385,31 +385,22 @@ function removeInstruction(event) {
     nextInstructionId -= 1;
 }
 
-// // Add Ingredient Button
+// Sign Up and Log in form validation
 
-// let ingredient = 1;
-// let maxIngredients = 20;
+let username = document.getElementById("username");
+let password = document.getElementById("password");
+let loginForm = document.getElementById("login-form");
+let signupForm = document.getElementById("signup-form");
+let formMessage = document.querySelector(".form-messages");
 
-// let addIngredientButton = document.querySelector(".add-ingredient-btn");
-// addIngredientButton.addEventListener("click", function(e) {
-//     e.preventDefault();
-//     if (ingredient < maxIngredients) {
-//         ingredient++;
-//         let newDiv = document.createElement("div");
-//         newDiv.innerHTML = `<div class="row"><div class="col-md-9 form-group mb-3">
-//         <input type="text" name="recipe_ingredients" class="form-control" id="recipe_ingredients${ingredient}" placeholder="Add ingredient, then click Add Ingredient or press 'Enter' for more">
-//         </div>
-//         <div class="text-center col-md-3">
-//         <button class="add-recipe-btn remove-ingredient-btn mb-3" type="submit"><i class="fas fa-minus"></i> Remove Ingredient</button>
-//         </div></div>`
-//         let ingredientsField = document.querySelector(".add-recipe-ingredients-field");
-//         ingredientsField.appendChild(newDiv);
+signupForm.addEventListener("submit", function(event){
+    let messages = [];
+    if(username.value === "" || username.value === null){
+        messages.push("Name is required");
+    }
 
-//     }
-// });
-
-// //remove button
-// $("section").on('click', ".remove-ingredient-btn", function() {
-//     $(this).parent('div').parent('div').remove();
-//     ingredient--;
-// });
+    if(messages.length > 0){
+        event.preventDefault();
+        formMessage.innerText = messages.join(", ");
+    }
+});
