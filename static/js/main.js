@@ -384,23 +384,3 @@ function removeInstruction(event) {
     }
     nextInstructionId -= 1;
 }
-
-// Sign Up and Log in form validation
-
-let username = document.getElementById("username");
-let password = document.getElementById("password");
-let loginForm = document.getElementById("login-form");
-let signupForm = document.getElementById("signup-form");
-let formMessage = document.querySelector(".form-messages");
-
-signupForm.addEventListener("submit", function(event){
-    let messages = [];
-    if(username.value === "" || username.value === null){
-        messages.push("Name is required");
-    }
-
-    if(messages.length > 0){
-        event.preventDefault();
-        formMessage.innerText = messages.join(", ");
-    }
-});
