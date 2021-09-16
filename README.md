@@ -91,9 +91,9 @@ Below is a table outlining what is visible to members and non members:
 
 | Nav Bar   |    Logged in |    Not Logged in  |
 | ---------:|------ :| -----:|
-| Home      |    ✔      |    ✔ |
-| About     |    ✔      |    ✔ |
-| Recipes   |    ✔      |    ✔ |
-| Contact   |    ✔      |    ✔ |
-| Signup    |    ❌     |    ✔ |
-| Log in    |    ❌     |    ✔ |
+|    Home      |    ✔      |    ✔ |
+|    About     |    ✔      |    ✔ |
+|    Recipes   |    ✔      |    ✔ |
+|    Contact   |    ✔      |    ✔ |
+|    Signup    |    ❌     |    ✔ |
+|    Log in    |    ❌     |    ✔ |
