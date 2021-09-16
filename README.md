@@ -91,9 +91,12 @@ Below is a table outlining what is visible to members and non members:
 
 | Nav Bar        | Logged In           | Logged out  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Home      | right-aligned | $1600 |
+| About      | centered      |   $12 |
+| Recipes | are neat      |    $1 |
+| Contact | are neat      |    $1 |
+| Signup | are neat      |    $1 |
+| Log in | are neat      |    $1 |
 
 | Nav Bar   |    Logged in |    Not Logged in  |
 | ---------:|------ :| -----:|
