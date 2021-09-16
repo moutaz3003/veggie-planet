@@ -146,3 +146,43 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 * Favourite button that allows users to save preferred recipes and view saved recipes on their profiles
 * Provide print-only version of recipes that allows users to print favourite recipes
 * Incorporate section that allows users to enter available ingredients and suggest a recipe based on entered ingredients
+
+***
+
+## Technologies
+
+### Languages
+
+* HTML
+* CSS
+* JavaScript
+* Python
+
+### Libraries & Frameworks
+
+* Bootstrap
+* Animate.css
+* Aos scroll animations
+* Swiper.js
+* jQuery
+* PyMongo
+* Flask
+* Jinja
+* Werkzeug
+
+### Wireframes
+
+* Balsamiq
+* Adobe Photoshop 
+
+### Tools
+
+* Adobe Photoshop - Wireframe and save images for web
+* Tinypng - Compress images for faster loading
+* [Imgbb](https://imgbb.com/) - To store images and get image URLs for recipes
+* Gitpod - Writing code
+* EmailJs - Turning user form input into email received
+* Github - Repository
+* Heroku - Host for project deployment
+* MongoDb - Database used for website
+* VSCode & Atom - For testing out tricky code prior to writing on Gitpod
