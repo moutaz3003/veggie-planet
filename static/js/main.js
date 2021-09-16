@@ -384,3 +384,23 @@ function removeInstruction(event) {
     }
     nextInstructionId -= 1;
 }
+
+
+// EmailJS
+(function () {
+    emailjs.init("user_yu6FXmAZKAhYkMOild236");
+})();
+
+function sendMail(params){
+    let temporaryParameters = {
+        subject: document.getElementById("subject").value,
+        email: document.getElementById("email").value,
+        from_name: document.getElementById("name").value,
+        message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_puljn4s", "template_p2it8zs", temporaryParameters)
+    .then(function(res){
+        console.log("success", res.status);
+    })
+}
