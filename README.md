@@ -1,6 +1,6 @@
-#Veggie Planet   
+# Veggie Planet   
 
-##Milestone Project 3 - Python and Data Centric Development 
+## Milestone Project 3 - Python and Data Centric Development 
 
 
 [Link to Live Website](https://veggie-planet.herokuapp.com/)  
@@ -39,10 +39,8 @@ Veggie Planet is a project that is intended to be used for the scope of this pro
 ***  
 
   
-
 ## Demo 
 
-  
 
 Clicking on this [link](https://veggie-planet.herokuapp.com/) provides access to the live website 
 
@@ -51,3 +49,28 @@ Clicking on this [link](https://veggie-planet.herokuapp.com/) provides access to
    <img src="static/img/site-responsiveness.png" alt="screenshot of responsive site"/> 
 
 </p> 
+
+***
+
+## User Experience 
+
+This site targets visitors who are interested in vegan recipes, and would like to share recipes of their own to contribute to the ever growing database of recipes 
+
+
+### Visitor Goals
+
+* To be able to see different recipes and search for recipes using keywords.
+* To create an account, be able to log into account
+* To be able to add, edit and delete user's own recipes and contribute to database of vegan recipes
+
+## Site Owner's Goals
+
+* To promote vegan movement and vegan lifestyle
+* To convince user that vegan food is very delicious
+* To enlighten users about the contribution they're making towards environment
+* To highlight the health benefit of a vegan diet
+* To highlight substitutes for carnivorous diets.
+
+## Strategy
+The design goal is to make a clear, intuitive, accessible, structured websitesite that allows visitors to easily find recipes, ingredients, and instructions, have clear call to action buttons encounraging users to register in order to add, edit and delete their own recipes. Links between various pages are intended to be very intuitive to allow for easy navigation.
+
