@@ -23,8 +23,9 @@ mongo = PyMongo(app)
 #------------- Home -----------------------
 @app.route("/")
 def home():
-    recipes = mongo.db.recipes.find()
-    return render_template("index.html", recipes=recipes)
+    recipes = list(mongo.db.recipes.find())
+    recipe_tabs = list(mongo.db.recipes.find())
+    return render_template("index.html", recipes=recipes, recipe_tabs=recipe_tabs)
 
 
 #------------- Sign Up -----------------------
@@ -103,6 +104,12 @@ def logout():
     flash("You Have Been Logged Out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+#------------ Meat alternatives------------------
+@app.route("/meat_alternatives")
+def meat_alternatives():
+    return render_template("meat_alternatives.html")
 
 
 #------------- Recipes page -----------------------

@@ -204,13 +204,13 @@
     });
 
     /**
-     * Events slider
+     * alternatives slider
      */
-    new Swiper('.events-slider', {
+    new Swiper('.alternatives-slider', {
         speed: 700,
         loop: true,
         autoplay: {
-            delay: 15000,
+            delay: 20000,
             disableOnInteraction: false
         },
         slidesPerView: 'auto',

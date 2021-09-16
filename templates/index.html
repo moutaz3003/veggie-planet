@@ -135,9 +135,16 @@ Veggie Planet | Home
                 <div class="col-lg-3">
                     <ul class="nav nav-tabs flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Modi sit est</a>
+                            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Title</a>
                         </li>
+                        {% for recipe in recipes %}
+                        {% if loop.index < 4 %}
                         <li class="nav-item">
+                            <a class="nav-link show" data-bs-toggle="tab" href="#tab-1">{{ recipe.recipe_title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                        <!-- <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Unde praesentium sed</a>
                         </li>
                         <li class="nav-item">
@@ -148,28 +155,43 @@ Veggie Planet | Home
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="col-lg-9 mt-4 mt-lg-0">
                     <div class="tab-content">
-                        <div class="tab-pane active show" id="tab-1">
+                        <div class="tab-pane active show" id="tab-2">
                             <div class="row">
                                 <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>Architecto ut aperiam autem id</h3>
+                                    <h3>Et blanditiis nemo veritatis excepturi</h3>
                                     <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila
                                         parde sonata raqer a videna mareta paulona marka</p>
-                                    <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum
-                                        eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat
-                                        minima eveniet eius et quis magni nihil. Consequatur dolorem
-                                        quaerat quos qui similique accusamus nostrum rem vero</p>
+                                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et
+                                        reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit
+                                        ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode
+                                        pakto madirna desera vafle de nideran pal</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="static/img/specials-1.png" alt="" class="img-fluid">
+                                    <img src="static/img/specials-2.png" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="tab-2">
+                        {% for recipe_tab in recipe_tabs %}
+                        {% if loop.index < 4 %}
+                        <div class="tab-pane" id="tab-1">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>{{ recipe_tab.recipe_title }}</h3>
+                                    <p>{{ recipe_tab.recipe_summary }}</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{{ recipe_tab.recipe_image_url }}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                        <!-- <div class="tab-pane" id="tab-2">
                             <div class="row">
                                 <div class="col-lg-8 details order-2 order-lg-1">
                                     <h3>Et blanditiis nemo veritatis excepturi</h3>
@@ -232,7 +254,7 @@ Veggie Planet | Home
                                     <img src="static/img/specials-5.png" alt="" class="img-fluid">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -241,8 +263,8 @@ Veggie Planet | Home
     </section>
     <!-- End Specials Section -->
 
-    <!-- ======= Events Section ======= -->
-    <section id="events" class="events">
+    <!-- ======= Alternatives Section ======= -->
+    <section id="alternatives" class="alternatives">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -250,12 +272,12 @@ Veggie Planet | Home
                 <p>Plant Based Alternatives For Your Cooking</p>
             </div>
 
-            <div class="events-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="alternatives-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
-                        <div class="row event-item">
-                            <div class="col-lg-6">
+                        <div class="row alternative-item">
+                            <div class="col-lg-6 my-auto">
                                 <img src="{{ url_for('static', filename='img/environment.png') }}" class="img-fluid" alt="Image of nature">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 my-auto content">
@@ -270,7 +292,7 @@ Veggie Planet | Home
                                     that is cruelty-free and consumes fewer resources.
                                 </p>
                                 <p>
-                                    Nutritionists and climate experts alike are warning against the consequences of the
+                                    Experts are warning against the consequences of the
                                     current high levels of meat consumption in much of the world, while increasing
                                     numbers of consumers are viewing the consumption of meat in a negative light. Vegan
                                     products offer many health benefits and are significantly more sustainable than
@@ -283,8 +305,8 @@ Veggie Planet | Home
                     <!-- End testimonial item -->
 
                     <div class="swiper-slide">
-                        <div class="row event-item">
-                            <div class="col-lg-6">
+                        <div class="row alternative-item">
+                            <div class="col-lg-6 my-auto">
                                 <img src="{{ url_for('static', filename='img/piglet.png') }}" class="img-fluid" alt="Image of piglet">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 my-auto content">
@@ -302,15 +324,15 @@ Veggie Planet | Home
                                     are free of cholesterol and usually contain fewer calories and less fat than similar
                                     burgers made with meat.
                                 </p>
-                                <a href="" class="general-button">See Meat Alternatives</a>
+                                <a href="{{ url_for('meat_alternatives') }}" class="alternatives-button button-general">See Meat Alternatives</a>
                             </div>
                         </div>
                     </div>
                     <!-- End testimonial item -->
 
                     <div class="swiper-slide">
-                        <div class="row event-item">
-                            <div class="col-lg-6">
+                        <div class="row alternative-item">
+                            <div class="col-lg-6 my-auto">
                                 <img src="{{ url_for('static', filename='img/calf.png') }}" class="img-fluid" alt="Image of calf">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 my-auto content">
@@ -327,15 +349,15 @@ Veggie Planet | Home
                                     cooking, and baking is now huge. Some plant milks have sugar added to them, but
                                     unsweetened options are also available.
                                 </p>
-                                <a href="" class="general-button">See Milk Alternatives</a>
+                                <a href="" class="alternatives-button button-general">See Milk Alternatives</a>
                             </div>
                         </div>
                     </div>
                     <!-- End testimonial item -->
 
                     <div class="swiper-slide">
-                        <div class="row event-item">
-                            <div class="col-lg-6">
+                        <div class="row alternative-item">
+                            <div class="col-lg-6 my-auto">
                                 <img src="{{ url_for('static', filename='img/chick.png') }}" class="img-fluid" alt="Image of chick">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 my-auto content">
@@ -350,7 +372,7 @@ Veggie Planet | Home
                                     environmental damage, and health risks. ProVeg presents a range of healthy vegan egg
                                     alternatives for cooking and baking.
                                 </p>
-                                <a href="" class="general-button">See Milk Alternatives</a>
+                                <a href="" class="mt-4 alternatives-button button-general">See Milk Alternatives</a>
                             </div>
                         </div>
                     </div>
@@ -362,7 +384,7 @@ Veggie Planet | Home
 
         </div>
     </section>
-    <!-- End Events Section -->
+    <!-- End alternatives Section -->
 
 
 
