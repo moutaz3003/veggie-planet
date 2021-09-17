@@ -266,3 +266,14 @@ In order to log in or signup, the user has to meet certain criteria in order to 
 <p align="center"> 
    <img src="static/img/invalid-signup.png" alt="screenshot of hero section for logged out user"/> 
 </p>
+
+
+Once a user is logged in, they are directed to their own profile page, where a flash message greets the user, and the submitted recipes are presented in the form of cards, 4 of which stack in a row on large screen, 2 cards per screen on medium devices and one card per screen on mobile devices. If the user hasn't submitted any entries yet, that is relayed through a message on the profile page
+
+<p align="center"> 
+   <img src="static/img/profile.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+<p align="center"> 
+   <img src="static/img/profile-no-input.png" alt="screenshot of hero section for logged out user"/> 
+</p>
