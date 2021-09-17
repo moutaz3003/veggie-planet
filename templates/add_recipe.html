@@ -13,90 +13,66 @@
 
             <div class="col-lg-12 mt-5 mt-lg-0">
 
-                <form action="{{ url_for('add_recipe') }}" method="POST" role="form" class="add-recipe-form mt-5">
-                    <!-- Recipe Title row-->
-                    <div class="row recipe_title">
-                        <div class="col-md-12 form-group mb-3">
-                            <label class="mb-2" for="recipe_title"><i class="fas fa-file-signature"></i> Recipe Title:</label>
-                            <input type="text" name="recipe_title" class="form-control" id="recipe_title"
-                                placeholder="Name of your recipe" required>
-                            
-                        </div>
-                    </div>
-                    <!-- Recipe summary row-->
-                    <div class="row">
-                        <div class="col-md-12 form-group mb-3">
-                            <label class="mb-2" for="recipe_summary"><i class="fas fa-comments"></i> Recipe Summary:</label>
-                            <input type="text" name="recipe_summary" class="form-control" id="recipe_summary"
-                                placeholder="Describe your recipe briefly">
-                        </div>
-                    </div>
-                    <!-- Recipe servings & ready_in row -->
-                    <div class="row">
-                        <div class="col-md-6 form-group mb-3 mt-md-0">
-                            <label class="mb-2" for="recipe_servings"><i class="fas fa-user-friends"></i> Servings:</label>
-                            <input type="number" class="form-control" name="recipe_servings" id="recipe_servings"
-                                placeholder="For how many people?" required>
-                        </div>
-                        <div class="col-md-6 form-group mb-3 mt-md-0">
-                            <label class="mb-2" for="recipe_ready_in"><i class="fas fa-hourglass-half"></i> Cooking Time:</label>
-                            <input type="number" class="form-control" name="recipe_ready_in" id="recipe_ready_in"
-                                placeholder="Preparation plus cooking time in minutes" required>
-                        </div>
-                    </div>
-                    <!-- Recipe category_name and calories row-->
-                    <div class="row">
-                        <div class="col-md-6 form-group mb-3">
-                            <label class="mb-2" for="category_name"><i class="fas fa-utensils"></i> Category:</label>
-                            <select class="form-select" name="category_name" id="category_name" aria-label="Meal category name" required>
-                                <option selected>Select Recipe Category</option>
+                <form action="{{url_for('add_recipe')}}" method="POST" name="addRecipe" id="addRecipe">
+                    <div class="form-group">
+                        <i class="fas fa-align-center"></i> <label class="form-field-description mb-2">Select Category</label>
+                        <select class="form-control category-formfield mb-4" id="category_name" name="category_name">
+                                <!-- Populates categories from database categories -->
                                 {% for category in categories %}
-                                <option value="{{ category.category_name|capitalize }}">
-                                    {{ category.category_name|capitalize }}</option>
+                                <option>{{category.category_name}}</option>
                                 {% endfor %}
                             </select>
-                        </div>
-                        <div class="col-md-6 form-group mb-3">
-                            <label class="mb-2" for="recipe_calories"><i class="fas fa-fire"></i> Calories:</label>
-                            <input type="number" class="form-control" name="recipe_calories" id="recipe_calories"
-                                placeholder="Kcal Per Serving">
+                    </div>
+                    <div class="form-group">
+                        <div class="controls mb-4">
+                            <i class="fas fa-pencil-alt"></i> <label class="form-field-description mb-2">Recipe Name</label>
+                            <input class="form-control" id="recipe_title" name="recipe_title" type="text" required data-validation-required-message="Please enter a recipe name." placeholder="Enter recipe name" maxlength="100">
                         </div>
                     </div>
-
-                    <!-- Recipe ingredients row-->
-                    <div class="row add-recipe-ingredients-field">
-                        <div class="col-md-9 col-sm-10 form-group mb-3">
-                            <label class="mb-2" for="recipe_ingredients"><i class="fas fa-carrot"></i> Ingredients:</label>
-                            <input type="text" name="recipe_ingredients" class="form-control" id="ingredient-input" placeholder="Add one ingredient at a time, then click 'Add Ingredient'">
-                        </div>
-
-                        <button class="col-md-3 col-sm-6 mt-4 mb-3 button-general add-ingredient-btn" type="submit"><i class="fas fa-plus-circle"></i> Add Ingredient</button>
-                    </div>
-
-
-                    <!-- Recipe Method row-->
-                    <div class="row add-method-field">
-                        <div class="col-md-9 col-sm-10 form-group mb-3">
-                            <label class="mb-2" for="recipe_method"><i class="fas fa-pencil-alt"></i> Cooking Method:</label>
-                            <input type="text" name="recipe_method" class="form-control" id="recipe_method" placeholder="Add one cooking instruction at a time, then click 'Add Cooking Step'">
-                        </div>
-
-                        <button class="col-md-3 col-sm-6 mt-4 mb-3 button-general add-method-btn" type="submit"><i class="fas fa-plus-circle"></i> Add
-                                Instruction</button>
-
-                    </div>
-
-                    <!-- Recipe image URL row-->
-                    <div class="row">
-                        <div class="col-md-12 form-group mb-3">
-                            <label class="mb-2" for="recipe_image_url"><i class="fas fa-link"></i> Recipe Image:</label>
-                            <input type="url" name="recipe_image_url" class="form-control" id="recipe_image_url"
-                                placeholder="Place image URL here">
+                    <div class="form-group">
+                        <div class="controls mb-4">
+                            <i class="fas fa-comments"></i> <label class="form-field-description mb-2">Recipe Summary</label>
+                            <input class="form-control" id="recipe_summary" name="recipe_summary" type="text" required data-validation-required-message="Please enter a description." placeholder="Insert short description of recipe" maxlength="100">
                         </div>
                     </div>
-                    <!-- Add recipe button-->
-                    <div class="text-center"><button class="add-recipe-btn" type="submit"><i class="fas fa-plus-circle"></i> 
-                        Add Recipe</button></div>
+                    <div class="form-group">
+                        <div class="controls mb-4">
+                            <i class="fas fa-user-friends"></i> <label class="form-field-description mb-2">Servings</label>
+                            <input class="form-control" id="recipe_servings" name="recipe_servings" type="number" required data-validation-required-message="Serves How Many" placeholder="Insert Number of people it serves">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="controls mb-4">
+                            <i class="fas fa-hourglass-half"></i> <label class="form-field-description mb-2">Ready in</label>
+                            <input class="form-control" id="recipe_ready_in" name="recipe_ready_in" type="number" required data-validation-required-message="Please enter number of minutes" placeholder="Preparation and cooking time in minutes">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="controls mb-4">
+                            <i class="fas fa-fire"></i> <label class="form-field-description mb-2">Calories per serving</label>
+                            <input class="form-control" id="recipe_calories" name="recipe_calories" type="number" required data-validation-required-message="Please enter estimated calories per serving" placeholder="Calories per serving. Please enter number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="controls mb-4">
+                            <i class="fas fa-list-ul"></i> <label class="form-field-description mb-2">Ingredients</label>
+                            <textarea class="form-control" id="recipe_ingredients" name="recipe_ingredients" rows="5" maxlength="3000">Enter ingredients here (Separate each ingredient on a new line by pressing the enter key after each ingredient)</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="controls mb-4">
+                            <i class="fas fa-clipboard-list"></i> <label class="form-field-description mb-2">Instructions</label>
+                            <textarea class="form-control" id="recipe_method" name="recipe_method" rows="5" maxlength="3000">Enter instructions here (Separate each instruction on a new line by pressing the enter key after each instruction)</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="controls mb-4">
+                            <i class="far fa-images"></i> <label class="form-field-description mb-2">Recipe Image</label>
+                            <input class="form-control" id="recipe_image_url" name="recipe_image_url" type="url" pattern="https://.*" required data-validation-required-message="Please enter a valid link to the recipe image." placeholder="Paste link to recipe image here">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success" id="sendMessageButton">Add Recipe</button>
+                    <a class="btn btn-success" href="{{ url_for('profile', username=session['user']) }}">Cancel</a>
                 </form>
 
             </div>
