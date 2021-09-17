@@ -274,6 +274,8 @@ In order to log in or signup, the user has to meet certain criteria in order to 
    <img src="static/img/invalid-signup.png" alt="screenshot of hero section for logged out user"/> 
 </p>
 
+If a username already exists on signup, or if a user enters incorrect username and/or password, a flash message prompts the user to that event, requiring the user to try again.
+
 
 Once a user is logged in, they are directed to their own profile page, where a flash message greets the user, and the submitted recipes are presented in the form of cards, 4 of which stack in a row on large screen, 2 cards per screen on medium devices and one card per screen on mobile devices. If the user hasn't submitted any entries yet, that is relayed through a message on the profile page
 
@@ -303,4 +305,22 @@ The edit recipe section relies on the edit_recipe route, which re-populates the 
 
 <p align="center"> 
    <img src="static/img/edit-recipe2.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+On the home page, the about section contains a brief message about the site's mission, and the intention to spread the message.. This is reinforced by three brief cards that summarise the main benefits of choosing a vegan diet.
+
+<p align="center"> 
+   <img src="static/img/mission.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+<p align="center"> 
+   <img src="static/img/whyvegan.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+<p align="center"> 
+   <img src="static/img/alternatives1.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+<p align="center"> 
+   <img src="static/img/alternatives2.png" alt="screenshot of hero section for logged out user"/> 
 </p>
