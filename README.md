@@ -415,4 +415,78 @@ If you would like to run this website locally you can clone this repository in a
 5. Copy the code shown
 6. Open up gitpod or preferred IDE
 7. Type git clone https://github.com/moutaz3003/veggie-planet.git
+8. create database on MongoDB then create application around it
+9. create cluster then create collections for users, recipes and category names
+10. inside each collection, insert document with key:value pairs (eg. recipe_name: "chickpea curry")
+
+
+### Flask:
+------
+
+### In the terminal:
+---------------
+- install flask using "pip3 install flask"
+- create python file which will be the foundation of application using "touch app.py"
+- storing sensitive data which needs to be hidden using environment variables .. So touch env.py
+
+### in env.py:
+----------
+inside env.py, we need to hide several pieces of data, to do that:
+- first import os to set our default environment variable
+
+setting up environment variables takes 2 arguments:
+- first is the variable name to get the confidential data
+- second is the actual data itself, so:
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")  .. port 5000 is the standard port used for flask applications
+
+- Then we need to set up secret key, which is required whenever we use the flash and session functions in flask
+os.environ.setdefault("SECRET_KEY", "password of choice")
+
+- Then set up variable to connect to the mongo database:
+os.environ.setdefault("MONGO_URI", "database connection URI"
+
+- then add variable to the mongo database name:
+os.environ.setdefault("MONGODB_NAME", "cook_book" or any name of choice) .. cook_book is the name of the database created earlier
+
+- Save env.py file
+
+***
+
+### In app.py:
+-------
+- import os
+- from flask import Flask .. importing Flask class from flask app
+
+- in order to use environment variables, we need to import env package. Since we are not going to push 
+the env.py file to GitHub, once our app is deployed to Heroku, it won't be able to find 
+the env.py file, so it will throw an error. This is why we need to only import env if the os can find 
+an existing file path for the env.py file itself, so:
+
+So:
+
+if os.path.exists("env.py"):
+	import env
+
+- create an instance of flask and store it in a variable called app:
+app = Flask(__name__)
+
+- create a test app to see if the set up is working:
+@app.route("/")
+def hello_world():
+	return "Any string"
+
+- The host will be set to the IP, so we need to type os.environ.get("IP") in order to fetch the default value
+which was "0.0.0.0"
+
+- The port will need to be converted to an integer, so we'll type: int(os.environ.get("PORT")).
+- Don't forget to separate each parameter with a comma.
+
+if __name__ == "__main__":
+	app.run(host=os.environ.get("IP"), 
+	port=int(os.environ.get("PORT")),
+	debug=True
+	)
+
 
