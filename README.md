@@ -295,5 +295,5 @@ The edit recipe section relies on the edit_recipe route, which re-populates the 
 </p>
 
 <p align="center"> 
-   <img src="static/img/edit-recipe1.png" alt="screenshot of hero section for logged out user"/> 
+   <img src="static/img/edit-recipe2.png" alt="screenshot of hero section for logged out user"/> 
 </p>
