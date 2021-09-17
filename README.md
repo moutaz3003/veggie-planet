@@ -256,3 +256,13 @@ And on the desktop version..
 <p align="center"> 
    <img src="static/img/invalid-search.png" alt="screenshot of hero section for logged out user"/> 
 </p>
+
+In order to log in or signup, the user has to meet certain criteria in order to be validated. The forms work as expected and produce a message prompting the user to meet the input criteria, i.e. no spaces allowed, or special characters in the username. The input fields also have a minimum and maximum length
+
+<p align="center"> 
+   <img src="static/img/invalid-login.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+<p align="center"> 
+   <img src="static/img/invalid-signup.png" alt="screenshot of hero section for logged out user"/> 
+</p>
