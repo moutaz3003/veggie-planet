@@ -318,7 +318,7 @@ On the home page, the about section contains a brief message about the site's mi
 </p>
 
 <p align="center"> 
-   <img src="static/img/alternatives1.png" alt="screenshot of hero section for logged out user"/> 
+   <img src="static/img/alternatives.png" alt="screenshot of hero section for logged out user"/> 
 </p>
 
 <p align="center"> 
