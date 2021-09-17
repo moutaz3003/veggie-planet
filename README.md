@@ -277,3 +277,23 @@ Once a user is logged in, they are directed to their own profile page, where a f
 <p align="center"> 
    <img src="static/img/profile-no-input.png" alt="screenshot of hero section for logged out user"/> 
 </p>
+
+When a registered user decides to add a recipe, they are required to complete fields for the recipe name, summary, number of servings, cooking and preparation time, estimated calories per serving, ingredients and method, the latter two were created as text areas that prompt the user to press enter after every entry, and the add recipe route in turn splits the entries at each new line and creates a list of ingredients/steps. I have opted for this method in order to generate a greater user experience, where I initially opted for an "Add ingredient" button and a "Remove ingredient" button for the ingredients, and "add" and "remove" buttons for the instructions. I found this method to be quite cumbersome for the user.
+
+<p align="center"> 
+   <img src="static/img/add-recipe1.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+<p align="center"> 
+   <img src="static/img/add-recipe2.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+The edit recipe section relies on the edit_recipe route, which re-populates the user's entries, and rejoins the individual ingredients and instructions at each new line, allowing for a seamless entry that can be up to 3000 characters long.
+
+<p align="center"> 
+   <img src="static/img/edit-recipe1.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+<p align="center"> 
+   <img src="static/img/edit-recipe1.png" alt="screenshot of hero section for logged out user"/> 
+</p>
