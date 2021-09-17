@@ -244,3 +244,15 @@ And on the desktop version..
 <p align="center"> 
    <img src="static/img/logged-out-hero.png" alt="screenshot of hero section for logged out user"/> 
 </p>
+
+#### The visitor goals are:
+
+* To be able to search for recipe using keyword, and be told that no results were found should the keyword entered be invalid
+
+<p align="center"> 
+   <img src="static/img/search-query.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+<p align="center"> 
+   <img src="static/img/invalid-search.png" alt="screenshot of hero section for logged out user"/> 
+</p>
