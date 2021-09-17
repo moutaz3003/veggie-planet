@@ -30,7 +30,7 @@ Veggie Planet | My Profile
                         <div class="col-sm-12 card-footer profile-recipe-card-buttons">
                             <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-info"><i class="far fa-edit"></i> Edit</a>
                             <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" 
-                            class="btn btn-danger delete-recipe" onclick="alert_delete()"><i class="far fa-trash-alt"></i> Delete</a>
+                            class="btn btn-danger delete-recipe"><i class="far fa-trash-alt"></i> Delete</a>
                         </div>
                     </div>
                 </div>
@@ -43,11 +43,5 @@ Veggie Planet | My Profile
 
 </section>
 <!-- End Login Section -->
-
-<script>
-    function alert_delete(){
-            window.confirm("Are you sure you want to delete recipe? This cannot be undone!!");
-        }
-    </script>
 
 {% endblock %}
