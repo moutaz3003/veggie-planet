@@ -38,7 +38,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Template Main CSS File -->
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
 </head>
@@ -51,24 +50,22 @@
 
             <!-- navbar -->
             <h1 class="logo me-auto me-lg-0"><a href="{{ url_for('home') }}">Veggie Planet</a></h1>
-
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a class="nav-link scrollto active" href="{{ url_for('home') }}">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="{{ url_for('find_recipes') }}">Recipes</a></li>
-                    <li><a class="nav-link scrollto" href="gallery.html">Gallery</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                     <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             {% if session.user %}
-                            <li><a class="nav-link scrollto"
-                                    href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
-                            <li><a class="nav-link scrollto" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                            <li><a class="nav-link scrollto" href="{{ url_for('logout') }}">Log Out</a></li>
+                                <li><a class="nav-link scrollto"
+                                        href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
+                                <li><a class="nav-link scrollto" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                                <li><a class="nav-link scrollto" href="{{ url_for('logout') }}">Log Out</a></li>
                             {% else %}
-                            <li><a class="nav-link scrollto" href="{{ url_for('login') }}">Log In</a></li>
-                            <li><a class="nav-link scrollto" href="{{ url_for('signup') }}">Sign Up</a></li>
+                                <li><a class="nav-link scrollto" href="{{ url_for('login') }}">Log In</a></li>
+                                <li><a class="nav-link scrollto" href="{{ url_for('signup') }}">Sign Up</a></li>
                             {% endif %}
                         </ul>
                     </li>
@@ -78,7 +75,7 @@
 
             <!-- Do not display the sign up button if the user is logged in -->
             {% if not session.user %}
-            <a href="{{ url_for('signup') }}" class="signup-btn scrollto d-none d-lg-flex">Sign Up</a>
+                <a href="{{ url_for('signup') }}" class="signup-btn scrollto d-none d-lg-flex">Sign Up</a>
             {% endif %}
 
         </div>
@@ -90,7 +87,7 @@
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
-        <p class="my-auto">{{ message }}</p>
+            <p class="my-auto">{{ message }}</p>
         {% endfor %}
         {% endif %}
         {% endwith %}
