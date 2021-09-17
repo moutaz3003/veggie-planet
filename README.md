@@ -622,12 +622,16 @@ this is important for generating password hash, and checking password hashes.
 
 1. I would like to thank my Mentor Brian Macharia for his continued support and willingness to make time for me, and go back to the drawing board with me and walk me through code and coding logic.
 
-2. I would like to thank my family who have been supportive.
+2. I would like to thank my family who have been supportive and understanding.
 
 3. I would like to thank my girlfriend Merve, who gave me the inspiration to embark on this project, which I'm sure will grow with time.
 
 4. Brian Traversy's youtube channel
 
+5. Kyle Webdev simplified for explaining code in a very watered down easy to understand manner.
+
 5. Unsplash for the free images
 
 6. Bootstrapmade for giving me the licence to use and modify one of their beautiful themes
+
+7. I would like to thank Sean, Mikklos and everyone in the Code Institute tutor support team to help me grasp python which was very confusing to me at first, but they have been very patient with me and always followed up on problems raised.
