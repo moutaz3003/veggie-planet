@@ -83,7 +83,7 @@
     <!--=========== End Header ========-->
 
     <!-- ======= Flash Messaages ======= -->
-    <section class="flash-messages my-auto">
+    <div class="flash-messages my-auto">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
@@ -91,7 +91,7 @@
         {% endfor %}
         {% endif %}
         {% endwith %}
-    </section>
+    </div>
     <!-- ======= End Flash Messaages ======= -->
 
     {% block content %}
