@@ -217,18 +217,66 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 
 <p align="center"> 
 
-   <img src="static/img/index-validator-error.png" alt="screenshot of responsive site"/> 
+   <img src="static/img/index-validator-error.png" alt="screenshot of HTML Validation"/> 
 
 </p>
 
 <p align="center"> 
 
-   <img src="static/img/css-val.png" alt="screenshot of responsive site"/> 
+   <img src="static/img/css-val.png" alt="screenshot of CSS validation"/> 
 
 </p>
 
 
 The website passed all validation tests, but however displayed a warning for not using a h1 tag as a top level header only. However, I have dismissed this warning as this is how the theme is intended and styled, where the h1 tag appears to be with a smaller font than proceeding tags, due to the styling applied to it for a modern look and feel to the website. Otherwise, there have been no errors.
+
+For Javascript testing, I have used a [JS Linter](https://jshint.com/). The results only showed warnings, but no errors were found
+
+<p align="center"> 
+
+   <img src="static/img/jslinter.png" alt="js linter report"/> 
+
+</p>
+
+My python code was tested with the [PEP8 Linter](http://pep8online.com/) and passed all tests
+
+<p align="center"> 
+
+   <img src="static/img/pep8.png" alt="pep8 compliance report"/> 
+
+</p>
+
+All pages on the site passed through Lighthouse in Chrome developer tools
+
+<p align="center"> 
+
+   <img src="static/img/lighthouse1.png" alt="lighthouse report"/> 
+
+</p>
+
+<p align="center"> 
+
+   <img src="static/img/lighthouse2.png" alt="lighthouse report"/> 
+
+</p>
+
+<p align="center"> 
+
+   <img src="static/img/lighthouse3.png" alt="lighthouse report"/> 
+
+</p>
+
+<p align="center"> 
+
+   <img src="static/img/lighthouse4.png" alt="lighthouse report"/> 
+
+</p>
+
+<p align="center"> 
+
+   <img src="static/img/lighthouse5.png" alt="lighthouse report"/> 
+
+</p>
 
 
 ### Manual Testing
@@ -257,21 +305,21 @@ And on the desktop version..
 * To be able to search for recipe using keyword, and be told that no results were found should the keyword entered be invalid
 
 <p align="center"> 
-   <img src="static/img/search-query.png" alt="screenshot of hero section for logged out user"/> 
+   <img src="static/img/search-query.png" alt="screenshot of search recipe"/> 
 </p>
 
 <p align="center"> 
-   <img src="static/img/invalid-search.png" alt="screenshot of hero section for logged out user"/> 
+   <img src="static/img/invalid-search.png" alt="screenshot of invalid search query"/> 
 </p>
 
 In order to log in or signup, the user has to meet certain criteria in order to be validated. The forms work as expected and produce a message prompting the user to meet the input criteria, i.e. no spaces allowed, or special characters in the username. The input fields also have a minimum and maximum length
 
 <p align="center"> 
-   <img src="static/img/invalid-login.png" alt="screenshot of hero section for logged out user"/> 
+   <img src="static/img/invalid-login.png" alt="screenshot of invalid login"/> 
 </p>
 
 <p align="center"> 
-   <img src="static/img/invalid-signup.png" alt="screenshot of hero section for logged out user"/> 
+   <img src="static/img/invalid-signup.png" alt="screenshot of hero section for invalid signup"/> 
 </p>
 
 If a username already exists on signup, or if a user enters incorrect username and/or password, a flash message prompts the user to that event, requiring the user to try again.
