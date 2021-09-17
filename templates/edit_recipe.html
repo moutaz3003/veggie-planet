@@ -54,7 +54,8 @@
                     <div class="form-group">
                         <div class="controls mb-4">
                             <i class="fas fa-fire"></i> <label class="form-field-description mb-2">Calories per serving</label>
-                            <input class="form-control" id="recipe_calories" name="{{ recipe.recipe_calories }}" type="number" required data-validation-required-message="Please enter estimated calories per serving" placeholder="Calories per serving. Please enter number">
+                            <input class="form-control" id="recipe_calories" name="recipe_calories" type="number" value="{{ recipe.recipe_calories }}"
+                            required data-validation-required-message="Please enter estimated calories per serving" placeholder="Calories per serving. Please enter number">
                         </div>
                     </div>
                     <div class="form-group">
