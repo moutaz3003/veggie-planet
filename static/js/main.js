@@ -272,9 +272,7 @@
 })()
 
 
-
-// Add and Remove ingredient buttons:
-
+// Add & Remove ingredient buttons
 const ingredientRow = document.querySelector(".ingredients-row");
 const ingredientContainer = document.querySelector(".add-recipe-ingredients-field");
 const addIngredientInput = document.getElementById("ingredient-input");
@@ -288,7 +286,7 @@ addIngredientButton.addEventListener("click", addIngredient);
 function addIngredient(event) {
     event.preventDefault();
     let newIngredientContainer = document.createElement("div");
-    newIngredientContainer.classList = "col-md-9 form-group mb-3";
+    newIngredientContainer.classList = "col-md-9 col-sm-10 form-group mb-3";
 
 
     let newIngredientInputElement = document.createElement("input");
@@ -303,7 +301,7 @@ function addIngredient(event) {
 
     let removeIngredientButton = document.createElement("button");
     removeIngredientButton.dataset.id = `${nextIngredientId}`;
-    removeIngredientButton.classList = "col-md-3 col-sm-9 mx-auto mt-0 mb-3 remove-ingredient-btn ingredient-button";
+    removeIngredientButton.classList = "col-md-3 col-sm-6 mt-0 mb-3 remove-ingredient-btn ingredient-button";
     removeIngredientButton.innerText = "Remove Ingredient";
 
     removeIngredientButton.addEventListener("click", removeIngredient);
@@ -330,8 +328,7 @@ function removeIngredient(event) {
     nextIngredientId -= 1;
 }
 
-
-// Add and Remove ingredient buttons:
+//Add & Remove cooking instruction buttons:
 const methodContainer = document.querySelector(".add-method-field");
 const addInstructionInput = document.getElementById("recipe_method");
 const addInstructionButton = document.querySelector(".add-method-btn");
@@ -343,7 +340,11 @@ addInstructionButton.addEventListener("click", addInstruction);
 function addInstruction(event) {
     event.preventDefault();
     let newMethodContainer = document.createElement("div");
-    newMethodContainer.classList = "col-md-9 form-group mb-3";
+    newMethodContainer.classList = "col-md-9 col-sm-10 form-group mb-3";
+    newMethodContainer.dataset.instruction = `${nextInstructionId}`;
+
+    let buttonContainer = document.createElement("div");
+    buttonContainer.classList = "col-md-3 col-sm-6 mt-4 mb-3";
 
 
     let newMethodInputElement = document.createElement("input");
@@ -358,7 +359,7 @@ function addInstruction(event) {
 
     let removeInstructionButton = document.createElement("button");
     removeInstructionButton.dataset.instruction = `${nextInstructionId}`;
-    removeInstructionButton.classList = "col-md-3 col-sm-9 mx-auto mt-0 mb-3 remove-method-btn";
+    removeInstructionButton.classList = "col-md-3 col-sm-6 mt-0 mb-3 remove-method-btn";
     removeInstructionButton.innerText = "Remove Instruction";
 
     removeInstructionButton.addEventListener("click", removeInstruction);
@@ -368,7 +369,6 @@ function addInstruction(event) {
     methodContainer.appendChild(removeInstructionButton);
     nextInstructionId += 1;
 }
-
 
 function removeInstruction(event) {
     event.preventDefault();
