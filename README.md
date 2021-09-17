@@ -212,8 +212,8 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 
 ### HTML & CSS Testing
 
-I have used [W3C Makrkup Validator](https://validator.w3.org/) to validate HTML code
-I have used [W3C CSS Validator](https://validator.w3.org/) to validate HTML code
+* I have used [W3C Makrkup Validator](https://validator.w3.org/) to validate HTML code
+* I have used [W3C CSS Validator](https://validator.w3.org/) to validate HTML code
 
 <p align="center"> 
 
@@ -224,3 +224,23 @@ I have used [W3C CSS Validator](https://validator.w3.org/) to validate HTML code
 The website passed all validation tests, but however displayed a warning for not using a h1 tag as a top level header only. However, I have dismissed this warning as this is how the theme is intended and styled, where the h1 tag appears to be with a smaller font than proceeding tags, due to the styling applied to it for a modern look and feel to the website. Otherwise, there have been no errors.
 
 
+### Manual Testing
+
+The design goal is to make a clear, accessible, structured site so that visitors can easily read the displayed recipes, make an account and add, edit and delete their own recipes.
+
+On small and medium devices the menu can be accessed through the hamburger menu, on large devices the navigation menu is always visible. There is a difference between the menu for a user who is not logged in and a user who is logged in. The signup call to action button disappears, the logged out user is left with the option to signup or login, while the logged in user is given the option to view profile, add recipe or log out.
+
+<p align="center"> 
+   <img src="static/img/logged-in-user-menu.png" alt="screenshot of menu for logged in user"/> 
+   <img src="static/img/logged-out-user-menu.png" alt="screenshot of menu for logged out user"/> 
+</p>
+
+And on the desktop version..
+
+<p align="center"> 
+   <img src="static/img/logged-in-hero.png" alt="screenshot of hero section for logged in user"/> 
+</p>
+
+<p align="center"> 
+   <img src="static/img/logged-out-hero.png" alt="screenshot of hero section for logged out user"/> 
+</p>
