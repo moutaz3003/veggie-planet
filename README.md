@@ -489,4 +489,145 @@ if __name__ == "__main__":
 	debug=True
 	)
 
+*** 
 
+### Heroku:
+-------
+- Before creating heroku application, we need to set up some dependencies that heroku needs to run the app.. This 
+will be created in the requirements.txt file:
+
+pip3 freeze --local > requirements.txt
+
+- Then set up procfile that heroku looks for to know which file runs the app and how to run it.
+
+echo:web python app.py > Procfile
+
+-Head over to Heroku.com
+- New --> Create new app
+
+- To connect app, we can do one of a few things. For simplicity, connect to Github repository.
+
+- Type in repository name as it appears on github, then Search
+
+- Once it finds repository, click connect.
+
+- Before Deploying, since some environment variables are hidden in the env.py file, Heroku will not be able
+to find them.. 
+
+- Therefore, click on settings tab --> Reveal config vars
+
+- when inserting the config vars, make sure to not include any quotes for either the keys or values
+
+insert keys and their values as per the env.py file.
+IP -> 0.0.0.0
+PORT -> 5000
+SECRET_KEY -> secret key
+MONGO_URI -> Mongo URI link
+MONGO_DBNAME -> cook_book (name of database)
+
+- Before deploying, we need to push the two files that we created first.
+- add, commit and push the requirements.txt and Procfile seperately
+- git add requirements.txt
+- git commit -m "Add requirements.txt"
+- git push
+- git add Procfile
+- git commit -m "Add Procfile"
+- git push
+
+- Then on Heroku deployment page, click "Deploy Branch".
+
+- Once app has been built, click view to see successful deployment of app
+
+- Any changes pushed on github from there on should be displayed on Heroku
+
+*** 
+
+# Wiring up database to flask application:
+---------------------------------------
+
+- For flask to communicate with Mongo, we need to install a third party library called flask-pymongo:
+pip3 install flask-pymongo
+
+- Need to install a package called dnspython in order to use the Mongo SRV connection string
+pip3 install dnspython
+
+- with every package installed, it's important to update requirements.txt for heroku to know we require more to
+run the app.. This again can be achieved with the command:
+pip3 freeze --local > requirements.txt
+
+## In the app.py file:
+------------------
+- update it with the newly installed packages by importing them:
+- from flask_pymongo import Pymongo
+- from bson.objectid import ObjectId .. this allows us to rended json like object for mongodb to find them
+
+- Then we need to add some configurations after the app variable:
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME") 
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY") .. requirement when using some functions from flask
+
+
+- Since we havent got the mongo URI connection string stored, we need to go back to mongodb website
+overview -> connect --> connect your application
+
+- copy the link provided, modify angle brackets to own clustername, password and database name
+then paste that into quotes for mongoURI in env.py file
+
+- update the heroku config var for MONGO_URI by pasting that link also
+
+- We need to setup an instance of PyMongo, and add the app into that using something called
+a constructor method, so type: 
+mongo = PyMongo(app)
+
+- This is the Flask 'app' object we've defined above, and is the final step to ensure our
+Flask app is properly communicating with the Mongo database.
+
+
+- we will import some additional functionalities from flask which we will use later.. These are:
+flash, render_template, redirect, session, and url_for
+
+- in the function under the route decorator, instead of returning hello world, we want it to render a template called
+insertname.html
+
+- On this tasks template, we want to be able to generate data from our collection
+on MongoDB, visible to our users, so before return statement:
+
+example = mongo.db.example.find()
+
+- Along with the rendering of the example.html template, we'll pass that tasks variable through to
+the template: example=example, where the first is a variable that the template will use.
+
+
+----------------------------------------------------------------------------------------------------------------
+### Template creation:
+------------------
+Flask looks for all HTML template files placed within a directory at the root-level called 'templates', plural.
+So create that directory from the terminal using the 'make directory' command: "mkdir templates".
+
+inside the templates folder, we will create your .html page
+
+----------------------------------------------------------------------------------------------------------------
+### Security using Werkzeug:
+-----------------------
+in appy.py:
+
+from werkzeug.security import generate_password_hash, check_password_hash
+
+this is important for generating password hash, and checking password hashes. 
+
+
+***
+
+## Acknowledgements
+
+1. I would like to thank my Mentor Brian Macharia for his continued support and willingness to make time for me, and go back to the drawing board with me and walk me through code and coding logic.
+
+2. I would like to thank my family who have been supportive.
+
+3. I would like to thank my girlfriend Merve, who gave me the inspiration to embark on this project, which I'm sure will grow with time.
+
+4. Brian Traversy's youtube channel
+
+5. Unsplash for the free images
+
+6. Bootstrapmade for giving me the licence to use and modify one of their beautiful themes
