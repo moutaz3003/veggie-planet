@@ -13,7 +13,7 @@
 
             <div class="col-lg-12 mt-5 mt-lg-0">
 
-                <form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST" name="editRecipe" id="editRecipe">
+                <form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST" name="edit-recipe-form" id="edit-recipe-form">
                     <div class="form-group">
                         <i class="fas fa-align-center"></i> <label class="form-field-description mb-2">Select Category</label>
                         <select class="form-control category-formfield mb-4" id="category_name" name="category_name">
