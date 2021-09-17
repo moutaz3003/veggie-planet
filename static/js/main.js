@@ -291,11 +291,3 @@ function sendMail(params){
     })
 }
 
-
-//provide alert when user clicks delete recipe
-
-let deleteRecipe = document.querySelector(".delete-recipe");
-
-deleteRecipe.addEventListener("click", function(){
-    alert("Are you sure you want to delete recipe?");
-});

@@ -56,17 +56,29 @@ Clicking on this [link](https://veggie-planet.herokuapp.com/) provides access to
 
 This site targets visitors who are interested in vegan recipes, and would like to share recipes of their own to contribute to the ever growing database of recipes 
 
+### The Ideal Customer For This Site Is:
+* Vegan looking for a collection of vegan recipes
+* Vegan looking for more info about vegan food and lifestyle
+* Vegan looking for alternatives to dairy, meat or general animal products
+* Vegan seeking to promote awareness of the vegan diet
+* Non-vegan looking to explore vegan food options
+* Non-vegan seeking information on plant alternatives to try out
 
 ### Visitor Goals
 
 * To be able to see different recipes and search for recipes using keywords.
-* To create an account, be able to log into account
-* To be able to add, edit and delete user's own recipes and contribute to database of vegan recipes
+* To create an account, be able to log into account.
+* To be able to add, edit and delete user's own recipes and contribute to database of vegan recipes.
+* To be able to easily navigate throughout the site through clean, interactive presentation
+* Allow users to identify this site as a promising collection of vegan recips which are challenging to find compiled in a single site
+* Most sites don't make a clear distinction between vegan and vegetarian
 
 ### Site Owner's Goals
 
 * To promote vegan movement and vegan lifestyle
-* To convince user that vegan food is very delicious
+* To convince user that vegan food is very delicious.
+* Allow user to know that alternatives are well within reach.
+* Answer some common questions through use of video and pages dedicated to plant based alternatives.
 * To enlighten users about the contribution they're making towards environment
 * To highlight the health benefit of a vegan diet
 * To highlight substitutes for carnivorous diets.
@@ -131,10 +143,15 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 * See overview of multiple recipes, by displaying title, summary, image, servings and cooking time
 * See specific recipe details by clicking on view recipe button
 * Clear, intuitive page navigation
+* Call to action buttons on header, hero section and alternatives section guiding the user toward's site's intended goals
 * Educational features presented using interactive elements such as slider, cards, and video button
+* play button giving user to play video concerning common arguments regarding veganism.
 * Use of images and scroll animations for a greater user experience
 * Register account, log in and log out features
 * View, add, edit and delete recipes
+* Contact form requesting user's name, email, subject and message and a send button
+* Header with logo and navigation list items that exists on every page of the site
+* Footer section that exists on every page throughout the site
 
 ### Features To Be Incorporated In The Future
 
@@ -146,6 +163,8 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 * Favourite button that allows users to save preferred recipes and view saved recipes on their profiles
 * Provide print-only version of recipes that allows users to print favourite recipes
 * Incorporate section that allows users to enter available ingredients and suggest a recipe based on entered ingredients
+* Integrate FAQ page for more commonly asked questions.
+* Change site language option to draw in more users from all around the globe
 
 ***
 
@@ -186,3 +205,22 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 * Heroku - Host for project deployment
 * MongoDb - Database used for website
 * VSCode & Atom - For testing out tricky code prior to writing on Gitpod
+
+***
+
+## Testing
+
+### HTML & CSS Testing
+
+I have used [W3C Makrkup Validator](https://validator.w3.org/) to validate HTML code
+I have used [W3C CSS Validator](https://validator.w3.org/) to validate HTML code
+
+<p align="center"> 
+
+   <img src="static/img/index-validator-error.png" alt="screenshot of responsive site"/> 
+
+</p>
+
+The website passed all validation tests, but however displayed a warning for not using a h1 tag as a top level header only. However, I have dismissed this warning as this is how the theme is intended and styled, where the h1 tag appears to be with a smaller font than proceeding tags, due to the styling applied to it for a modern look and feel to the website. Otherwise, there have been no errors.
+
+
