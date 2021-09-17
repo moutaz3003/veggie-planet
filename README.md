@@ -384,3 +384,35 @@ Each of the swiper elements is visible for 20 seconds, and three of them allow t
 </p>
 
 
+***
+
+## Deployment
+
+### To find the repository:
+
+1. Go to [Motaz's Github](https://github.com/moutaz3003) .. https://github.com/moutaz3003
+2. go to repositories.
+3. Find the repository for "Veggie Planet"
+4. Click on the link on the right in the "About" section
+
+### To View live link:
+
+1. Go to readme file
+2. Click on "Live demo" link at the very top of the readme.md file
+
+### Run local:
+
+If you would like to run this website locally you can clone this repository in an IDE such as VSCode. Make sure that PIP3, Flask, Python3 and Git are installed. Set up your account for MongoDB Atlas.
+
+<p align="center"> 
+   <img src="static/img/github.png" alt="screenshot of github repository"/> 
+</p>
+
+1. Log into Github
+2. Find moutaz3003 account
+3. Find the "Veggie Planet Repository"
+4. Click on "Code"
+5. Copy the code shown
+6. Open up gitpod or preferred IDE
+7. Type git clone https://github.com/moutaz3003/veggie-planet.git
+
