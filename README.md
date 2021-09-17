@@ -324,3 +324,15 @@ On the home page, the about section contains a brief message about the site's mi
 <p align="center"> 
    <img src="static/img/alternatives2.png" alt="screenshot of hero section for logged out user"/> 
 </p>
+
+Each of the swiper elements is visible for 20 seconds, and three of them allow the user to further navigate to see plant alternatives for meat, milk and eggs and how they can be utilised to achieve the desired taste and or/ cooking effect..
+
+<p align="center"> 
+   <img src="static/img/alternatives3.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+<p align="center"> 
+   <img src="static/img/alternatives4.png" alt="screenshot of hero section for logged out user"/> 
+</p>
+
+
