@@ -301,7 +301,7 @@ function addIngredient(event) {
 
     let removeIngredientButton = document.createElement("button");
     removeIngredientButton.dataset.id = `${nextIngredientId}`;
-    removeIngredientButton.classList = "col-md-3 col-sm-6 mt-0 mb-3 remove-ingredient-btn ingredient-button";
+    removeIngredientButton.classList = "col-md-3 col-sm-6 mt-0 mb-3 remove-ingredient-btn button-general";
     removeIngredientButton.innerText = "Remove Ingredient";
 
     removeIngredientButton.addEventListener("click", removeIngredient);
@@ -359,7 +359,7 @@ function addInstruction(event) {
 
     let removeInstructionButton = document.createElement("button");
     removeInstructionButton.dataset.instruction = `${nextInstructionId}`;
-    removeInstructionButton.classList = "col-md-3 col-sm-6 mt-0 mb-3 remove-method-btn";
+    removeInstructionButton.classList = "col-md-3 col-sm-6 mt-0 mb-3 remove-method-btn button-general";
     removeInstructionButton.innerText = "Remove Instruction";
 
     removeInstructionButton.addEventListener("click", removeInstruction);

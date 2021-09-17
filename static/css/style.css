@@ -31,7 +31,7 @@ h6 {
 .button-general {
   background: #cda45e;
   border: 0;
-  padding: 10px 35px;
+  padding: 10px 25px;
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
@@ -1417,6 +1417,8 @@ section {
   background: green;
   padding: 5px;
   font-size: 0.8rem;
+  border-radius: 30px;
+  border: none;
 }
 
 .add-method-btn:hover,
@@ -1425,10 +1427,12 @@ section {
   color: white;
 }
 
-.remove-ingredient-btn {
+.remove-ingredient-btn,
+.remove-method-btn {
   background: red;
   padding: 5px;
   font-size: 0.8rem;
+  border-radius: 30px;
 }
 
 .remove-ingredient-btn:hover {
