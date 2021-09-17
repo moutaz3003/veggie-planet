@@ -213,13 +213,20 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 ### HTML & CSS Testing
 
 * I have used [W3C Makrkup Validator](https://validator.w3.org/) to validate HTML code
-* I have used [W3C CSS Validator](https://validator.w3.org/) to validate HTML code
+* I have used [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator) to validate HTML code
 
 <p align="center"> 
 
    <img src="static/img/index-validator-error.png" alt="screenshot of responsive site"/> 
 
 </p>
+
+<p align="center"> 
+
+   <img src="static/img/css-val.png" alt="screenshot of responsive site"/> 
+
+</p>
+
 
 The website passed all validation tests, but however displayed a warning for not using a h1 tag as a top level header only. However, I have dismissed this warning as this is how the theme is intended and styled, where the h1 tag appears to be with a smaller font than proceeding tags, due to the styling applied to it for a modern look and feel to the website. Otherwise, there have been no errors.
 
