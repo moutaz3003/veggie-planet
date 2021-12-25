@@ -208,6 +208,30 @@ def edit_recipe(recipe_id):
     )
 
 
+# Updates the recipe in the database with user changes
+@app.route("/update_recipe/<recipe_id>", methods=["POST"])
+def update_recipe(recipe_id):
+    recipe = mongo.db.recipes
+
+    form_data = request.form.to_dict()
+
+    ingredients_list = form_data["ingredients"].split("\n")
+    instructions_list = form_data["instructions"].split("\n")
+
+    recipe.update({"_id": ObjectId(recipe_id)},
+                  {
+                   "category_name": form_data["category_name"],
+                   "recipe_name": form_data["recipe_name"],
+                   "image_link": form_data["image_link"],
+                   "description": form_data["description"],
+                   "ingredients": ingredients_list,
+                   "instructions": instructions_list
+                   })
+
+    return redirect(url_for("edit_recipe",
+                            recipe_id=recipe_id))
+
+
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     """------------- Delete Recipe ---------------"""
