@@ -181,7 +181,7 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
-@app.route("/edit_recipe/<recipe_id>")
+@app.route("/edit_recipe/<recipe_id>", methods=["GET"])
 def edit_recipe(recipe_id):
     """------------ Edit Recipe -----------------"""
     recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
@@ -215,17 +215,20 @@ def update_recipe(recipe_id):
 
     form_data = request.form.to_dict()
 
-    ingredients_list = form_data["ingredients"].split("\n")
-    instructions_list = form_data["instructions"].split("\n")
+    ingredients_list = form_data["recipe_ingredients"].split("\n")
+    method_list = form_data["recipe_method"].split("\n")
 
     recipe.update({"_id": ObjectId(recipe_id)},
                   {
                    "category_name": form_data["category_name"],
-                   "recipe_name": form_data["recipe_name"],
+                   "recipe_title": form_data["recipe_title"],
+                   "recipe_summary": form_data["recipe_summary"],
+                   "recipe_servings": form_data["recipe_servings"],
+                   "recipe_ready_in": form_data["recipe_ready_in"],
+                   "recipe_calories": form_data["recipe_calories"],
                    "image_link": form_data["image_link"],
-                   "description": form_data["description"],
                    "ingredients": ingredients_list,
-                   "instructions": instructions_list
+                   "instructions": method_list
                    })
 
     return redirect(url_for("edit_recipe",
