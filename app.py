@@ -87,6 +87,8 @@ def login():
 
 @app.route("/contact")
 def contact():
+    if request.method == "POST":
+        flash("Your message has been sent. We will be in touch shortly!")
     return render_template("contact.html")
 
 
