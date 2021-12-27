@@ -259,7 +259,7 @@ For Javascript testing, I have used a [JS Linter](https://jshint.com/). The resu
 
 <p align="center"> 
 
-   <img src="static/img/jslinter.png" alt="js linter report"/> 
+   <img src="static/img/js-linter.png" alt="js linter report"/> 
 
 </p>
 
