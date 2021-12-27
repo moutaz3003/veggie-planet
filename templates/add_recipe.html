@@ -18,7 +18,7 @@ Veggie Planet | Add Recipe
 
             <div class="col-lg-12 mt-5 mt-lg-0">
 
-                <form action="{{url_for('add_recipe')}}" method="POST" name="add-recipe-form" id="add-recipe-form" class="add-recipe-form">
+                <form action="{{ url_for('add_recipe') }}" method="POST" name="add-recipe-form" id="add-recipe-form" class="add-recipe-form">
                     <div class="form-group">
                         <i class="fas fa-align-center"></i> <label class="form-field-description mb-2">Select Category</label>
                         <select class="form-control category-field mb-4" id="category_name" name="category_name">

@@ -56,8 +56,9 @@ Veggie Planet | Find Recipes
                         <p class="ready-in">
                             <strong><i class="fas fa-clock"></i> Ready In:</strong> {{ recipe.recipe_ready_in }}
                         </p>
-                        <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}" class="recipe-button mt-5">View Full
-                            Recipe</a>
+                        <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}" class="recipe-button d-block mt-5 w-50 w-sm-100 mx-auto">
+                            View Full Recipe
+                        </a>
                     </div>
                 {% else %}
                     <div
@@ -72,8 +73,10 @@ Veggie Planet | Find Recipes
                         <p class="ready-in">
                             <strong><i class="fas fa-clock"></i> Ready In:</strong> {{ recipe.recipe_ready_in }}
                         </p>
-                        <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}" class="recipe-button mt-5">View Full
-                            Recipe</a>
+                        <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}" 
+                        class="recipe-button d-block mt-5 w-50 w-sm-100 mx-auto text-center">
+                            View Full Recipe
+                        </a>
                     </div>
                     <div class="col-lg-6 order-2 order-lg-1 order-md-1" data-aos="zoom-in" data-aos-delay="100">
                         <div class="find_recipe-img">
@@ -82,7 +85,7 @@ Veggie Planet | Find Recipes
                     </div>
                 {% endif %}
                 {% if loop.index != loop.length  %}
-                    <hr class="mt-4 mb-4">
+                    <hr class="mt-4 mb-5">
                 {% endif %}
             </div>
 
