@@ -37,15 +37,15 @@ Veggie Planet | Find Recipes
         <div class="all-recipes">
         {% for recipe in recipes %}
             <!-- Display All recipes -->
-            <div class="row mb-5">
+            <div class="row mb-1">
                 {% if loop.index % 2 != 0 %}
-                    <div class="col-lg-6 order-1 order-lg-2 order-md-1" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-6 order-lg-2 order-sm-1" data-aos="zoom-in" data-aos-delay="100">
                         <div class="find_recipe-img">
-                            <img src="{{ recipe.recipe_image_url }}" alt="" class="mh-75 recipe-img">
+                            <img src="{{ recipe.recipe_image_url }}" alt="" class="mh-75 mt-3 recipe-img">
                         </div>
                     </div>
                     <div
-                        class="my-auto col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 order-md-2 content text-center justify-content-center align-items-center">
+                        class="my-auto col-lg-6 pt-2 pt-lg-0 order-lg-1 order-sm-2 content text-center justify-content-center align-items-center">
                         <h3>{{ recipe.recipe_title }}</h3>
                         <p class="fst-italic mt-5">
                             {{ recipe.recipe_summary }}
@@ -62,7 +62,7 @@ Veggie Planet | Find Recipes
                     </div>
                 {% else %}
                     <div
-                        class="my-auto col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 order-md-2 content text-center justify-content-center align-items-center">
+                        class="my-auto col-lg-6 pt-2 pt-lg-0 order-lg-2 order-sm-1 content text-center justify-content-center align-items-center">
                         <h3>{{ recipe.recipe_title }}</h3>
                         <p class="fst-italic mt-5">
                             {{ recipe.recipe_summary }}
@@ -78,14 +78,14 @@ Veggie Planet | Find Recipes
                             View Full Recipe
                         </a>
                     </div>
-                    <div class="col-lg-6 order-2 order-lg-1 order-md-1" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-6 order-lg-1 order-sm-2" data-aos="zoom-in" data-aos-delay="100">
                         <div class="find_recipe-img">
-                            <img src="{{ recipe.recipe_image_url }}" class="mh-75 recipe-img" alt="">
+                            <img src="{{ recipe.recipe_image_url }}" class="mh-75 mt-3 recipe-img" alt="">
                         </div>
                     </div>
                 {% endif %}
                 {% if loop.index != loop.length  %}
-                    <hr class="mt-4 mb-5">
+                    <hr class="mt-5 mb-5">
                 {% endif %}
             </div>
 

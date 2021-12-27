@@ -961,7 +961,7 @@ section {
 .find_recipe .find_recipe-img::before {
   position: absolute;
   left: 20px;
-  top: 20px;
+  top: 30px;
   width: 60px;
   height: 60px;
   z-index: 1;
@@ -1034,6 +1034,13 @@ section {
 @media (min-width: 1024px) {
   .find_recipe {
       background-attachment: fixed;
+  }
+}
+
+@media (max-width: 680px) {
+  .find_recipe .find_recipe-img::before,
+  .find_recipe .find_recipe-img::after {
+    display: none;
   }
 }
 
@@ -1893,7 +1900,8 @@ background: radial-gradient(circle, rgba(39,32,19,1) 0%, rgba(0,0,0,1) 100%);
   padding-bottom: 8px;
 }
 
-.signup .signup-form input {
+.signup .signup-form input,
+.signup-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -1914,6 +1922,10 @@ background: radial-gradient(circle, rgba(39,32,19,1) 0%, rgba(0,0,0,1) 100%);
 
 .signup .signup-form input {
   height: 44px;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.signup-form textarea {
   background-color: rgba(255,255,255,0.1);
 }
 
