@@ -70,7 +70,7 @@ This site targets visitors who are interested in vegan recipes, and would like t
 
 * To be able to see different recipes and search for recipes using keywords.
 * To create an account, be able to log into account.
-* To be able to add, edit and delete user's own recipes and contribute to database of vegan recipes.
+* To be able to add, read, edit and delete user's own recipes and contribute to database of vegan recipes.
 * To be able to easily navigate throughout the site through clean, interactive presentation
 * Allow users to identify this site as a promising collection of vegan recips which are challenging to find compiled in a single site
 * Most sites don't make a clear distinction between vegan and vegetarian
@@ -118,7 +118,7 @@ Below is a table outlining what is visible to members and non members:
 Accessing the "My Profile" page enables user to edit or delete recipe, both of which are also options not availabe to non members
 
 ### Design Structure
-The website used a template that is free to use by [BootstrapMade](https://bootstrapmade.com/) called Restaurantly, after receiving permission to use this template for the purposes of my project. I have however modified the template and tailored it to my own needs, using slightly different colour schemes and free/license-free images from [Unsplash](https://unsplash.com/). The template comes with a few libraries including bootstrap, animate css for smooth animations, swiper touch slider, but I have also decided to use AOS on-scroll animation library, glightbox for interactive image animations on hover.
+The website used a template that is free to use by [BootstrapMade](https://bootstrapmade.com/) called Restaurantly, after receiving permission to use this template for the purposes of my project. I have however modified the template and tailored it to my own needs, using different colour schemes, fonts and free/license-free images from [Unsplash](https://unsplash.com/). The template comes with a few libraries including bootstrap, animate css for smooth animations, swiper touch slider, but I have also decided to use AOS on-scroll animation library, glightbox for interactive image animations on hover.
 
 ### Fonts
 Three fonts from google fonts have been used to embed the following fonts: 
@@ -172,7 +172,7 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 ## Database
 * The database chosen for this is a non-relational database hosted on MongoDB.
 * The application uses 2 database collections, 'categories' and 'recipes'.
-* The basic information of each recipe (category, recipe_title, recipe_summary, recipe_servings, recipe_ready_in and calories) is stored as a key value whilst the content of the ingredients and instructions for each recipe are stored as an array.
+* The basic information of each recipe (category, recipe_title, recipe_summary, recipe_servings, recipe_ready_in, recipe_image_url and recipe_calories) is stored as a key value whilst the content of the ingredients and instructions for each recipe are stored as an array.
 * The idea behind the array is to be able to better structure the output of the ingredients and instructions data in the recipe view.
 * This is achieved by the user segregating each ingredient/instruction in the add/edit recipe form using a line break (hit enter after each ingredient/instruction).
 * The user is instructed to do this via the placeholder text in the applicable textarea on the edit/add recipe page.
@@ -408,7 +408,8 @@ Each of the swiper elements is visible for 20 seconds, and three of them allow t
    <img src="static/img/alternatives4.png" alt="screenshot of hero section for logged out user"/> 
 </p>
 
-
+### Contact form
+The contact form uses the "formsubmit" action which allows one to connect form to formsubmit.io's endpoints and receive user's submission in the form of an email. The form works as expected on both contact and index pages.
 ***
 
 ## Deployment

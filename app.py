@@ -87,6 +87,7 @@ def login():
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
+    """--- View to render contact page ---"""
     if request.method == "POST":
         flash("Your message has been sent. We will be in touch shortly!")
     return render_template("contact.html")
@@ -188,9 +189,9 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
-# --------------- Edit recipe ---------------
 @app.route("/update_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    """ --------------- Edit recipe ---------------"""
     if "user" in session:
 
         recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -199,11 +200,12 @@ def edit_recipe(recipe_id):
 
         # create lists for ingredients and method
         recipe_ingredients_list = [
-        ingredient for ingredient in recipe["recipe_ingredients"]
+                                   ingredient for ingredient in 
+                                   recipe["recipe_ingredients"]
         ]
 
         recipe_instructions_list = [instruction for instruction
-                                in recipe["recipe_method"]]
+                                    in recipe["recipe_method"]]
 
         if session["user"] == 'admin':
 
