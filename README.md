@@ -16,7 +16,9 @@
 
 * [User Experience](#User-Experience)  
 
-* [Features](#Game-Requirements) 
+* [Features](#Game-Requirements)
+
+* [Database](#Database)
 
 * [Technologies](#Technologies) 
 
@@ -104,7 +106,6 @@ Below is a table outlining what is visible to members and non members:
 | Nav Bar        | Logged In           | Logged out  |
 | ------------- |:-------------:| -----:|
 | Home      | ✔ | ✔ |
-| About      | ✔      |   ✔ |
 | Recipes | ✔      |    ✔ |
 | Contact | ✔      |    ✔ |
 | Signup | ❌      |    ✔ |
@@ -148,7 +149,7 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 * play button giving user to play video concerning common arguments regarding veganism.
 * Use of images and scroll animations for a greater user experience
 * Register account, log in and log out features
-* View, add, edit and delete recipes
+* View, add, edit and delete recipes, and view individual recipes
 * Contact form requesting user's name, email, subject and message and a send button
 * Header with logo and navigation list items that exists on every page of the site
 * Footer section that exists on every page throughout the site
@@ -166,6 +167,19 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 * Integrate FAQ page for more commonly asked questions.
 * Change site language option to draw in more users from all around the globe
 
+***
+
+## Database
+* The database chosen for this is a non-relational database hosted on MongoDB.
+* The application uses 2 database collections, 'categories' and 'recipes'.
+* The basic information of each recipe (category, recipe_title, recipe_summary, recipe_servings, recipe_ready_in and calories) is stored as a key value whilst the content of the ingredients and instructions for each recipe are stored as an array.
+* The idea behind the array is to be able to better structure the output of the ingredients and instructions data in the recipe view.
+* This is achieved by the user segregating each ingredient/instruction in the add/edit recipe form using a line break (hit enter after each ingredient/instruction).
+* The user is instructed to do this via the placeholder text in the applicable textarea on the edit/add recipe page.
+* The textarea content is then split using "/n" and saved as an array in the database.
+* The reverse is applied "/n.join" to pre-populate the textarea formfields when editing a recipe.
+* The view recipe page applies a for each function to combine each array item into a collection of ingredienst/instructions to the user.
+* This also felt like a better user experience since the other option was to add "add ingredient/method" and "remove ingredient/method" buttons which would make for a more tedious experience.
 ***
 
 ## Technologies
@@ -218,6 +232,8 @@ The website had a number of prominent bugs. The navigation options for "About" a
    <img src="static/img/email-confirmation.png" alt="screenshot of email confirmation when form is submitted"/> 
 
 </p>
+
+The other major bug was that updating a recipe produced a server error. This was mainly due to the fact that an if statement for the post method was not provided in the edit_recipe view, and also a discrepancy in the naming of the fields that will be updated on the database. When the methods were successfully handled, a bug still existed in that the submitted recipes would still not show up on the user's profile page, due to the "created_by" field being missing, so the view had no way of knowing that the submitted recipe belongs to the session user. This has been amended and the entire CRUD functionality is working seamlessly.
 
 ### HTML & CSS Testing
 
