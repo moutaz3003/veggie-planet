@@ -85,7 +85,7 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
         flash("Your message has been sent. We will be in touch shortly!")

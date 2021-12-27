@@ -210,6 +210,15 @@ I have used [Font Awesome](https://fontawesome.com/) for all of the icons I have
 
 ## Testing
 
+### Bug fixes
+The website had a number of prominent bugs. The navigation options for "About" and "Contact were broken". This has been taken care of and the contact forms on both the contact page and the index page successfully sumbit visitor messages and forward them to my personal email address as displayed below:
+
+<p align="center"> 
+
+   <img src="static/img/email-confirmation.png" alt="screenshot of email confirmation when form is submitted"/> 
+
+</p>
+
 ### HTML & CSS Testing
 
 * I have used [W3C Makrkup Validator](https://validator.w3.org/) to validate HTML code
