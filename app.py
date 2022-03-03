@@ -184,7 +184,7 @@ def add_recipe():
         }
         mongo.db.recipes.insert_one(new_recipe)
         flash("Recipe Successfully Added")
-        return redirect(url_for("add_recipe"))
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("add_recipe.html", categories=categories)
 
@@ -242,6 +242,8 @@ def edit_recipe(recipe_id):
         elif session["user"].lower() == recipe["created_by"].lower():
 
             if request.method == "POST":
+                ingredients_list = form_data["recipe_ingredients"].split("\n")
+                method_list = form_data["recipe_method"].split("\n")
                 mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, 
                 {
                       "category_name": form_data["category_name"],
@@ -252,7 +254,8 @@ def edit_recipe(recipe_id):
                       "recipe_calories": form_data["recipe_calories"],
                       "recipe_image_url": form_data["recipe_image_url"],
                       "recipe_ingredients": ingredients_list,
-                      "recipe_method": method_list
+                      "recipe_method": method_list,
+                      "created_by": session["user"]
                   })
                 flash("Your recipe is updated successfully")
                 return redirect(url_for("profile", username=session["user"]))
