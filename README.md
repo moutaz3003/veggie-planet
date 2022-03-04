@@ -16,7 +16,7 @@
 
 * [User Experience](#User-Experience)  
 
-* [Features](#Game-Requirements)
+* [Features](#Features)
 
 * [Database](#Database)
 
